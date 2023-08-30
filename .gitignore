@@ -1,7 +1,12 @@
+*.mlma
+*.fa
+*.bed
 *.pyc
+wsgi.py
 .pytest_cache/
 PheWeb.egg-info
 build
 dist
 pheweb/load/cffi/_x*
 .eggs
+.venv

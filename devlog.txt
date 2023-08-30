@@ -1,0 +1,115 @@
+
+RBierman notes on using Pheweb started Aug 10th 2023
+
+================================
+Installing pheweb python package
+================================
+Originally tried installing in python 3.11, but had
+issues with some dependency called "greenlet"a
+
+Using python 3.10.4 in a venv worked well:
+* python -m venv .venv
+* source .venv/bin/activate
+* pip install -U pip
+* pip install wheel
+* pip install pheweb
+
+This installed PheWeb version 1.3.16
+
+==================
+Configuring pheweb
+==================
+According to the Github docs, need to create a config.py
+for pheweb to read from in the "main" directory
+Docs: https://github.com/statgen/pheweb/blob/master/etc/detailed-loading-instructions.md#configuration-options
+
+There aren't any templates I can find, but also not that many options
+I see a problem already where I have to set "hg_build_number = 19" or "hg_build_number = 38"
+I think pheweb is intended for displaying human data
+
+Yeah, there is a hardcoded path in the code that points to hg builds in ucsc
+https://github.com/statgen/pheweb/blob/76f0d0e32ae72e51bc4b259ce4b16edfd653601a/pheweb/load/detect_ref.py#L42
+
+Also as Vista pointed out, the set of allowed chromosomes is only:
+_allowed_chroms = list(map(str,range(1,22+1))) + ['X','Y','M']
+
+I might have to go into the code and change this
+
+======================================
+Downloading test mlma files from Vista
+======================================
+Asked Vista to share 3 association files for using in building a toy website with pheweb
+Trying to find files to use that match the description here:
+https://github.com/statgen/pheweb/tree/76f0d0e32ae72e51bc4b259ce4b16edfd653601a#3-prepare-your-association-files
+
+Vista shared 3 mlma files here (they each have ~11M lines) with columns:
+https://www.dropbox.com/scl/fo/hkdpc2r7xfuzojmlln7ci/h?dl=0&rlkey=pvjavl4gqv67q0i82q6wbh7qy
+    Chr	SNP	bp	A1	A2	Freq	b	se	p
+    1	1:629:C:T	629	T	C	0.0119403	1.4334	2.844	0.614255
+
+So I'll need to parse these files a tiny bit to match the format that pheweb expects
+
+==============================
+Reformatting association files
+==============================
+I'm going to make copies of the mma files and reformat them to a csv with the expected columns
+
+Here's what the modified files look like:
+   chrom   pos ref alt       maf     p_val
+0      1   629   T   C  0.011940  0.906345
+1      1  2076   T   G  0.011456  0.024558
+
+I took A1 to mean 'ref' and A2 to mean 'alt' allele, but max(maf) > 0.5 sometimes
+so I guess that's not the case.
+
+Pheweb needs the ref to match the genome that it's going to download (or have cached)
+So I need to ask Vista what ref genome is used, and how to specify ref from A1/A2
+Maybe 1:629:C:T means the "C" is the ref?
+
+Ok, I'm returning to this after downloading the dog ref fastas (described in section "Downloading Dog reference data with Vista's help")
+
+
+====================================================
+Understanding how manhattan plots are made in pheweb 
+====================================================
+I was surprised that there were no python plotting libraries in the setup.py requirements section
+
+Turns out that pheweb is using d3 to draw the manhattan and qq plots on the client side in javascript
+
+When pheweb is loading/processing the data files it creates json files which can be used to make the
+manhattan plots by d3 on the backend
+
+I wonder if plotly or another python plotting library could make interactive manhattan plots in 
+a static.html file?
+--> yes it seems like this is possible
+--> I wonder if creating a static website would be easier than trying to get pheweb working with dog data
+
+================================================
+Downloading Dog reference data with Vista's help
+================================================
+I told Vista that Pheweb is a bit hardcoded for human genomes, and she shared the dog genome with me: canFam 3.1
+which I can download from: https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000002285.3/
+
+Vista also shared a BED file for dog genes, which I didn't even think about, but will also undoubtedly be important for Pheweb
+https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffo%2Fhkdpc2r7xfuzojmlln7ci%2Fh%3Frlkey%3Dpvjavl4gqv67q0i82q6wbh7qy%26dl%3D0&data=05%7C01%7Crbierman%40princeton.edu%7C2b1ef6e1cc2c456cdb2a08db99ca1e8d%7C2ff601167431425db5af077d7791bda4%7C0%7C0%7C638272865604190208%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=2F%2BZ8Nc35%2FbC1nJTEL2u8POP2j0OMmB0gSU7eSN27sM%3D&reserved=0
+
+Pheweb expects the chromosomes to be separate fasta files as shown in this line:
+https://github.com/statgen/pheweb/blob/76f0d0e32ae72e51bc4b259ce4b16edfd653601a/pheweb/load/detect_ref.py#L39C14-L39C14
+The format is: .pheweb/cache/reference-{}-chrom-{}.fa
+
+So I'm going to separate the single .fna file I downloaded into multiple files
+The file name is "GCF_000002285.3_CanFam3.1_genomic.fna" 
+I checked one of the "mlma" files from Vista and it used chr's 1 through 39 (just numeric 1, not chr1)
+Ah, chr39 is actually X, but it seems like "39" is used in the mlma files so I'll just leave it that way
+
+I put these in canfam3.1_fas/ subdir, but then I think I'll have to move them to the path that Pheweb expects
+
+Ah, I think I also need to change the fasta headers from:
+>NC_006583.3 Canis lupus familiaris breed boxer chromosome 1, CanFam3.1, whole genome shotgun sequence
+
+to just:
+>1
+
+according to the "get_region" function here: https://github.com/statgen/pheweb/blob/76f0d0e32ae72e51bc4b259ce4b16edfd653601a/pheweb/file_utils.py#L212C45-L212C45
+
+

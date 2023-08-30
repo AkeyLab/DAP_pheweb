@@ -1,17 +1,13 @@
-For a list of available instances of PheWeb, navigate [here](http://pheweb.sph.umich.edu).
-For a walk-through demo see [here](etc/demo.md#demo-navigating-pheweb).
-If you have questions or comments, check out our [Google Group](https://groups.google.com/g/pheweb-umich).
 
-![screenshot of PheWAS plot](https://cloud.githubusercontent.com/assets/862089/25474725/3edbe256-2b02-11e7-8abb-0ca26d406b11.png)
+This is a fork of Pheweb specifically for the Dog Aging Project (DAP)
+
 
 # How to Cite PheWeb
 If you use the PheWeb code base for your work, please cite our paper:
 
 Gagliano Taliun, S.A., VandeHaar, P. et al. Exploring and visualizing large-scale genetic associations by using PheWeb. *Nat Genet* 52, 550–552 (2020).
 
-# How to Build a PheWeb for your Data
-
-If this is broken, [open an issue on github](https://github.com/statgen/pheweb/issues/new) and hopefully I can help.
+# How to Build a PheWeb for DAP data
 
 ### 1. Install PheWeb
 
@@ -150,7 +146,38 @@ To hide the button for downloading top hits and phenotypes, add `download_top_hi
 
 To allow dynamically filtering the manhattan plot, run `pheweb best-of-pheno` and set `show_manhattan_filter_button=True` in `config.py`.
 
-# Modifying PheWeb
+# Modifying DAP PheWeb
 
-See instructions [here](etc/detailed-development-instructions.md).
-See documentation about the files in `generated-by-pheweb/` [here](etc/detailed-internal-dataflow.md).
+Here are the steps I took to get a development installation of PheWeb running on my mac laptop:
+
+1. Clone the DAP PheWeb repo
+
+* `git clone https://github.com/AkeyLab/DAP_pheweb.git`
+
+2. cd into the repo and create a virtual environment. I used python 3.8 after I had some trouble with 3.11
+
+* `cd DAP_pheweb`
+
+* `python3.8 -m venv .venv`
+
+* `source .venv/bin/activate`
+
+3. Install wheel and then pheweb as editable
+
+* `pip install wheel`
+
+* `pip install -e .`
+
+4. Check that pheweb is installed
+
+* `which pheweb`
+
+5. Run the included tests, hopefully they should all pass
+
+* `pip install pytest`
+
+* `python -m pytest`
+
+6. Do a test run of the server. Run the following command, and while that is running, open a browser window and go to http://0.0.0.0:8000/ and there should be a small pheweb example application running.
+
+* `./tests/run-all.sh`
