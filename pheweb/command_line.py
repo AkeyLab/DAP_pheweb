@@ -60,7 +60,9 @@ for submodule in '''
         module_run = getattr(module, 'run', None)
         if not callable(module_run): raise Exception("module.run ({!r}) isn't callable for module {!r}".format(module_run, module))
         module_run(argv)
+
     handlers[submodule.replace('_', '-')] = functools.partial(f, submodule)
+
 handlers['process'] = handlers['process-assoc-files']
 handlers['parse'] = handlers['parse-input-files']
 

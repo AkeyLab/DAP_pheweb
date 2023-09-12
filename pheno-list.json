@@ -1,0 +1,14 @@
+[
+    {
+        "assoc_files": ["DogAgingProject_gp-0.70_biallelic-snps_N-6358_maf-0.01_afus_dora_15_eat_anything_N-4533_cov-dd_sex_N-6279_Estimated_Age_Years_at_AFUS_followup1-afus_dd_dog_weight_lbs_N-4437_chr1.loco.csv"],
+        "phenocode": "pheno1"
+    },
+    {
+        "assoc_files": ["DogAgingProject_gp-0.70_biallelic-snps_N-6358_maf-0.01_afus_dora_5_choosy_treats_N-4533_cov-dd_sex_N-6279_Estimated_Age_Years_at_AFUS_followup1-afus_dd_dog_weight_lbs_N-4437_chr1.loco.csv"],
+        "phenocode": "pheno2"
+    },
+    {
+        "assoc_files": ["DogAgingProject_gp-0.70_biallelic-snps_N-6358_maf-0.01_geno-0.05_hwe-1.0E-20-midp-keep-fewhet_phe-dd_weight_lbs_N-6279_cov-dd_sex_N-6279_qcov-Estimated_Age_Years_at_HLES_N-6279_chr1.loco.csv"],
+        "phenocode": "pheno3"
+    }
+]

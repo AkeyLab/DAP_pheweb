@@ -8,7 +8,16 @@ import os, sys, contextlib, urllib.request, functools
 
 
 class Build:
-    _allowed_chroms = list(map(str,range(1,22+1))) + ['X','Y','M']
+    #_allowed_chroms = list(map(str,range(1,22+1))) + ['X','Y','M'] #RB hardcoding dog genome chroms
+    _allowed_chroms = [
+        1,2,3,4,5,6,7,8,9,10,
+        11,12,13,14,15,16,17,18,19,20,
+        21,22,23,24,25,26,27,28,29,30,
+        31,32,33,34,35,36,37,38,39,
+    ]
+
+    _allowed_chroms = [str(c) for c in _allowed_chroms]
+
     def __init__(self, hg_name, grch_name):
         self.hg_name = hg_name
         self.grch_name = grch_name
@@ -36,7 +45,8 @@ class Build:
         if chrom not in self._open_chrom_files:
             if chrom not in self._allowed_chroms:
                 return None
-            ref_filepath = os.path.join(os.path.expanduser('~'),'.pheweb/cache/reference-{}-chrom-{}.fa'.format(self.hg_name, chrom))
+            #ref_filepath = os.path.join(os.path.expanduser('~'),'.pheweb/cache/reference-{}-chrom-{}.fa'.format(self.hg_name, chrom)) #RB hardcode dog genome fasta paths
+            ref_filepath = '/Users/rb3242/Documents/Akey/DAP/DAP_pheweb/canfam3.1_fas/reference-CanFam3.1-chrom-{}.fa'.format(chrom)
             if not os.path.exists(ref_filepath):
                 mkdir_p(os.path.dirname(ref_filepath))
                 url = 'ftp://hgdownload.cse.ucsc.edu/goldenPath/{}/chromosomes/chr{}.fa.gz'.format(self.hg_name, chrom)

@@ -2,6 +2,11 @@
 *.fa
 *.bed
 *.pyc
+*.csv
+*.fa
+*.fai
+*.gz
+generated-by-pheweb/
 wsgi.py
 .pytest_cache/
 PheWeb.egg-info
