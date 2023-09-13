@@ -11,7 +11,7 @@
     },
     {
         "assoc_files": ["DogAgingProject_gp-0.70_biallelic-snps_N-6358_maf-0.01_geno-0.05_hwe-1.0E-20-midp-keep-fewhet_phe-dd_weight_lbs_N-6279_cov-dd_sex_N-6279_qcov-Estimated_Age_Years_at_HLES_N-6279_chr1.loco.csv"],
-        "phenocode": "midp-keepy-fewhet",
+        "phenocode": "Weight",
         "category": "Genotype"
     }
 ]
