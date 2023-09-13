@@ -26,6 +26,7 @@ qq
 phenotypes
 pheno_correlation
 '''.split('\n')
+
 scripts = [script for script in scripts if script]
 
 def run(argv:List[str]) -> None:

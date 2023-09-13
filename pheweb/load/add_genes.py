@@ -13,6 +13,7 @@ import os
 import os.path
 import boltons.iterutils
 from typing import List,Tuple,Optional,Dict,Iterator
+import shutil
 Chrom = str
 GeneName = str
 
@@ -73,6 +74,7 @@ class GeneAnnotator(object):
 
 def annotate_genes(in_filepath:str, out_filepath:str) -> None:
     '''Both args are filepaths'''
+    #RB hoping to skip this
     ga = GeneAnnotator(get_gene_tuples())
     with VariantFileWriter(out_filepath) as out_f, \
          VariantFileReader(in_filepath) as variants:

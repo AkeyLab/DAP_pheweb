@@ -20,14 +20,14 @@ def get_genes_for_build(hg_build_number: int) -> None:
             dest_filepath, conf.get_cache_dir()))
 
     # Download from https://resources.pheweb.org/
-    url = 'https://resources.pheweb.org/{}'.format(dest_filepath.name)
-    print('Downloading {} from {}'.format(dest_filepath, url))
-    dest_tmp_filepath = Path(get_tmp_path(dest_filepath))
-    try:
-        wget.download(url=url, out=str(dest_tmp_filepath)); print()
-    except Exception as exc:
-        raise PheWebError('Failed to download genes from {}.  Try `pheweb download-genes-from-scratch` instead.'.format(url)) from exc
-    os.rename(dest_tmp_filepath, dest_filepath)
+    #url = 'https://resources.pheweb.org/{}'.format(dest_filepath.name)
+    #print('Downloading {} from {}'.format(dest_filepath, url))
+    #dest_tmp_filepath = Path(get_tmp_path(dest_filepath))
+    #try:
+    #    wget.download(url=url, out=str(dest_tmp_filepath)); print()
+    #except Exception as exc:
+    #    raise PheWebError('Failed to download genes from {}.  Try `pheweb download-genes-from-scratch` instead.'.format(url)) from exc
+    #os.rename(dest_tmp_filepath, dest_filepath)
 
 def run(argv:List[str]) -> None:
     import argparse
