@@ -13,6 +13,7 @@ import os
 import os.path
 import boltons.iterutils
 from typing import List,Tuple,Optional,Dict,Iterator
+import shutil
 Chrom = str
 GeneName = str
 
@@ -73,6 +74,7 @@ class GeneAnnotator(object):
 
 def annotate_genes(in_filepath:str, out_filepath:str) -> None:
     '''Both args are filepaths'''
+    #RB hoping to skip this
     ga = GeneAnnotator(get_gene_tuples())
     with VariantFileWriter(out_filepath) as out_f, \
          VariantFileReader(in_filepath) as variants:
@@ -81,7 +83,6 @@ def annotate_genes(in_filepath:str, out_filepath:str) -> None:
             out_f.write(v)
 
 def run(argv:List[str]) -> None:
-
     if '-h' in argv or '--help' in argv:
         print('Annotate the sites file with nearest genes.  Fetches the relevant version of Gencode if not already present.')
         exit(1)
@@ -90,12 +91,10 @@ def run(argv:List[str]) -> None:
     genes_filepath = get_filepath('genes', must_exist=False)
     out_filepath = get_filepath('sites', must_exist=False)
 
-    if not os.path.exists(genes_filepath):
-        print('Fetching genes...')
-        from . import download_genes
-        download_genes.run([])
+    print('Fetching genes...')
+    from . import download_genes
+    download_genes.run([])
 
-    if os.path.exists(out_filepath) and max(mtime(genes_filepath), mtime(input_filepath)) <= mtime(out_filepath):
-        print('gene annotation is up-to-date!')
-    else:
-        annotate_genes(input_filepath, out_filepath)
+    print('About to annotate genes')
+    annotate_genes(input_filepath, out_filepath)
+    print('Finished fetching genes')

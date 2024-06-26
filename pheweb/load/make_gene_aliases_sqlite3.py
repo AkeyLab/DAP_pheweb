@@ -29,12 +29,13 @@ def get_genenamesorg_ensg_aliases_map(ensgs_to_consider: Iterable[str]) -> Dict[
 
 def get_gene_aliases() -> Dict[str, str]:
     # NOTE: "canonical" refers to the canonical symbol for a gene
+    print('IN GET GENE ALIASES!!!!')
     genes = [{'canonical': canonical, 'ensg':ensg} for _,_,_,canonical,ensg in get_gene_tuples_with_ensg()]
-    assert len({g['ensg'] for g in genes}) == len(genes)
-    assert len({g['canonical'] for g in genes}) == len(genes)
-    for g in genes:
-        assert re.match(r'^ENSGR?[0-9]+(?:\.[0-9]+(?:_[0-9]+)?(?:_PAR_[XY])?)?$', g['ensg']), g
-        #assert re.match(r'^[-\._a-zA-Z0-9]+$', g['canonical']), (g['canonical'], [ord(c) for c in g['canonical']], g)
+    #assert len({g['ensg'] for g in genes}) == len(genes)
+    #assert len({g['canonical'] for g in genes}) == len(genes)
+    #for g in genes:
+    #    assert re.match(r'^ENSGR?[0-9]+(?:\.[0-9]+(?:_[0-9]+)?(?:_PAR_[XY])?)?$', g['ensg']), g
+    #    #assert re.match(r'^[-\._a-zA-Z0-9]+$', g['canonical']), (g['canonical'], [ord(c) for c in g['canonical']], g)
     print('num canonical gene names: {}'.format(len(genes)))
 
     canonicals_upper = {g['canonical'].upper() for g in genes}

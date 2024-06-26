@@ -12,9 +12,8 @@ from typing import List
 
 
 def get_rsids_for_build(hg_build_number: int) -> None:
-
+    print("TRYING")
     dest_filepath = Path(get_filepath('rsids-hg{}'.format(hg_build_number), must_exist=False))
-    if dest_filepath.exists(): return
 
     # Check cache_dir
     cache_dir = conf.get_cache_dir()
@@ -34,7 +33,10 @@ def get_rsids_for_build(hg_build_number: int) -> None:
     print('Downloading {} from {}'.format(dest_filepath, url))
     dest_tmp_filepath = Path(get_tmp_path(dest_filepath))
     try:
-        wget.download(url=url, out=str(dest_tmp_filepath)); print()
+        #wget.download(url=url, out=str(dest_tmp_filepath)); print() #RB don't want to do the rsid download
+        #RB instead creating an empty file
+        with open(dest_tmp_filepath,'w') as _:
+            pass
     except Exception as exc:
         raise PheWebError('Failed to download rsids from {}.  Try `pheweb download-rsids-from-scratch` instead.'.format(url)) from exc
     os.rename(dest_tmp_filepath, dest_filepath)

@@ -117,8 +117,16 @@ def run(argv:List[str]) -> None:
         debugging_limit_num_variants = conf.get_debugging_limit_num_variants()
         if debugging_limit_num_variants: rsid_group_reader = itertools.islice(rsid_group_reader, 0, debugging_limit_num_variants)
 
-        rsid_group = next(rsid_group_reader)
+        #rsid_group = next(rsid_group_reader) #RB we aren't going to use the rsid information
         for cp_group in cp_group_reader:
+
+            # No match, just print each cpra with an empty `rsids` column
+            # RB copied from "else" case below, we just want "empty" for rsids
+            for cpra in cp_group:
+                cpra['rsids'] = ''
+                writer.write(cpra)
+
+            continue
 
             # Advance rsid_group until it is up to/past cp_group
             while True:

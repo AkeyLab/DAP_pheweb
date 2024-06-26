@@ -51,12 +51,16 @@ def run(argv:List[str]) -> None:
                 best_phenos_for_gene[genename] = best_phenos
         data = best_phenos_for_gene
 
-    out_tmp_filepath = Path(get_tmp_path(out_filepath))
-    db = sqlite3.connect(str(out_tmp_filepath))
+    #RB NOTE: The `.replace()` command is getting "resource busy" on SOL
+    #RB NOTE: do we really need the tmp file? Oh, maybe if the sql making fails
+    #RB NOTE: then there would be a partial file? Hopefully this is ok.
+    #out_tmp_filepath = Path(get_tmp_path(out_filepath))
+    #db = sqlite3.connect(str(out_tmp_filepath))
+    db = sqlite3.connect(str(out_filepath))
     with db:
         db.execute('CREATE TABLE best_phenos_for_each_gene (gene TEXT PRIMARY KEY, json TEXT)')
         db.executemany('INSERT INTO best_phenos_for_each_gene (gene, json) VALUES (?,?)', ((k,json.dumps(v)) for k,v in data.items()))
-    out_tmp_filepath.replace(out_filepath)
+    #out_tmp_filepath.replace(out_filepath)
     print('Done making best-pheno-for-each-gene at {}'.format(str(out_filepath)))
 
 def get_regions_on_chrom() -> Dict[str,List[Tuple[int,int]]]:

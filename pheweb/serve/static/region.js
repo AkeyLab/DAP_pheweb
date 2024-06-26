@@ -153,15 +153,22 @@ LocusZoom.TransformationFunctions.add("percent", function(x) {
                 title: 'Shift view 3/4 to the right',
                 direction: 0.75,
                 group_position: "end"
-            }, {
+            }, 
+            /*
+            {
                 type: 'download',
                 position: 'right',
-            }, {
+            },
+            {
                 type: 'download_png',
                 position: 'right',
-            }, LocusZoom.Layouts.get('toolbar_widgets', 'ldlz2_pop_selector')]
+            },
+            */
+            //LocusZoom.Layouts.get('toolbar_widgets', 'ldlz2_pop_selector')]
+            ]
         },
         panels: [
+            /*
             function() {
                 var base = LocusZoom.Layouts.get("panel", "annotation_catalog", {
                     unnamespaced: true,
@@ -188,6 +195,7 @@ LocusZoom.TransformationFunctions.add("percent", function(x) {
                 anno_layer.hit_area_width = 50;
                 return base;
             }(),
+            */
             function() {
                 // FIXME: The only customization here is to make the legend button green and hide the "move panel" buttons; displayn options doesn't need to be copy-pasted
                 var base = LocusZoom.Layouts.get("panel", "association_catalog", {
@@ -308,6 +316,8 @@ LocusZoom.TransformationFunctions.add("percent", function(x) {
                 base.legend.origin.y = 15;
                 return base;
             }(),
+            //RB removing the gene position info
+            /*
             LocusZoom.Layouts.get("panel", "genes", {
                 unnamespaced: true,
                 // proportional_height: 0.5,
@@ -333,6 +343,7 @@ LocusZoom.TransformationFunctions.add("percent", function(x) {
                     })
                 ],
             })
+            */
         ]
     });
     LocusZoom.Layouts.add("plot", "pheweb_association", layout);

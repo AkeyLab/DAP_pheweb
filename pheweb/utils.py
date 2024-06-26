@@ -83,11 +83,19 @@ assert pad_gene(200000, 700000) == (200000, 700000), pad_gene(200000, 700000)
 assert pad_gene(200000, 800000) == (200000, 800000), pad_gene(200000, 800000)
 
 
-chrom_order_list = [str(i) for i in range(1,22+1)] + ['X', 'Y', 'MT']
+#chrom_order_list = [str(i) for i in range(1,22+1)] + ['X', 'Y', 'MT'] #RB hardcoding dog chrs
+chrom_order_list = [
+    1,2,3,4,5,6,7,8,9,10,
+    11,12,13,14,15,16,17,18,19,20,
+    21,22,23,24,25,26,27,28,29,30,
+    31,32,33,34,35,36,37,38,39,
+]
+chrom_order_list = [str(c) for c in chrom_order_list]
 chrom_order = {chrom: index for index,chrom in enumerate(chrom_order_list)}
-chrom_aliases = {'23': 'X', '24': 'Y', '25': 'MT', 'M': 'MT'}
-for chrom in chrom_order_list: chrom_aliases['chr{}'.format(chrom)] = chrom
-for alias, chrom in list(chrom_aliases.items()): chrom_aliases['chr{}'.format(alias)] = chrom
+#chrom_aliases = {'23': 'X', '24': 'Y', '25': 'MT', 'M': 'MT'}
+#for chrom in chrom_order_list: chrom_aliases['chr{}'.format(chrom)] = chrom
+#for alias, chrom in list(chrom_aliases.items()): chrom_aliases['chr{}'.format(alias)] = chrom
+chrom_aliases = {}
 
 
 def get_gene_tuples_with_ensg() -> ty.Iterator[ty.Tuple[str,int,int,str,str]]:

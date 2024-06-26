@@ -71,7 +71,7 @@ def print_ip(port:int, urlprefix:str) -> None:
     print("In that case, you can view the site using an ssh tunnel:")
     print("  - If you use Mac/Linux, run `ssh -N -L {}:localhost:{} <username>@<server>`, similar to your usual `ssh <username>@<server>`".format(port, port))
     print("  - If you use PuTTY on Windows, follow https://stackoverflow.com/a/29168936/1166306")
-    print("  - Either way, open http://localhost:5000 in your web browser")
+    print("  - Either way, open http://localhost:8000 in your web browser")
     print('')
 
 def get_ip() -> str:
@@ -108,7 +108,7 @@ def run(argv:List[str]) -> None:
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--host', default='0.0.0.0', help='the hostname to use to access this server')
-    parser.add_argument('--port', type=int, default=5000)
+    parser.add_argument('--port', type=int, default=8000)
     parser.add_argument('--accesslog', default='-', help='the file to write the access log')
     parser.add_argument('--no-reloader', action='store_false', dest='use_reloader')
     parser.add_argument('--num-workers', type=int, default=8, help='number of worker threads')

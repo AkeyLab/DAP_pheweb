@@ -1,3 +1,9 @@
+
+/* DAP theming */
+body {
+  background-color: #fff;
+}
+
 /* Reconcile bootstrap3 to typeahead.js (the real Typeahead, not bootstrap-typeahead) */
 .twitter-typeahead {
   width: 100%;

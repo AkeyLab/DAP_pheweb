@@ -31,6 +31,7 @@ def get_filepath(kind:str, *, must_exist:bool = True) -> str:
     if must_exist and not os.path.exists(filepath):
         raise PheWebError("Filepath {} of kind {} was requested but doesn't exist".format(filepath, kind))
     return filepath
+
 _single_filepaths: Dict[str,Callable[[],str]] = {
     # in data_dir:
     'correlations-raw': (lambda: os.path.join(conf.get_data_dir(), 'pheno-correlations.txt')),
@@ -39,8 +40,10 @@ _single_filepaths: Dict[str,Callable[[],str]] = {
     'rsids': (lambda: get_generated_path('resources/rsids-v{}-hg{}.tsv.gz'.format(dbsnp_version, conf.get_hg_build_number()))),
     'rsids-hg19': (lambda: get_generated_path('resources/rsids-v{}-hg19.tsv.gz'.format(dbsnp_version))),
     'rsids-hg38': (lambda: get_generated_path('resources/rsids-v{}-hg38.tsv.gz'.format(dbsnp_version))),
-    'genes': (lambda: get_generated_path('resources/genes-v{}-hg{}.bed'.format(genes_version, conf.get_hg_build_number()))),
-    'genes-hg19': (lambda: get_generated_path('resources/genes-v{}-hg19.bed'.format(genes_version))),
+    #'genes': (lambda: get_generated_path('resources/genes-v{}-hg{}.bed'.format(genes_version, conf.get_hg_build_number()))), #RB hardcoding dog BED
+    'genes': (lambda: 'Canis_lupus_familiaris.CanFam3.1.ensembl.gene_annotations.withHuman.withExtraCol.bed'),
+    #'genes-hg19': (lambda: get_generated_path('resources/genes-v{}-hg19.bed'.format(genes_version))),
+    'genes-hg19': (lambda: 'Canis_lupus_familiaris.CanFam3.1.ensembl.gene_annotations.withHuman.withExtraCol.bed'),
     'genes-hg38': (lambda: get_generated_path('resources/genes-v{}-hg38.bed'.format(genes_version))),
     'gene-aliases-sqlite3': (lambda: get_generated_path('resources/gene_aliases-v{}.sqlite3'.format(genes_version))),
     # simple:
