@@ -1,0 +1,38 @@
+Installed python virtualenv for pheweb with the
+following commands which were run in this directory:
+
+    * module load mamba
+        --> load SOL's mamba
+
+    * mamba create --prefix pheweb_env python=3.10.4
+        --> [creates a new mamba env for pheweb]
+
+    * source activate /scratch/rbierma1/DAP_pheweb/pheweb_env
+        --> [activates the mamba env]
+
+    * which pip
+        --> /scratch/rbierma1/DAP_pheweb/pheweb_env/bin/pip
+
+    * pip install -e .
+        --> [install the local pheweb package in editable mode]
+
+    * which pheweb
+        --> /scratch/rbierma1/DAP_pheweb/pheweb_env/bin/pheweb
+
+    * pheweb --help
+        --> [successfully gives help message]
+
+    * source deactivate
+        --> [deactivates the mamba env]
+
+    * which pheweb
+        --> [not found on path, this is ok]
+
+    * /scratch/rbierma1/DAP_pheweb/pheweb_env/bin/pheweb --help
+        --> [successfully gives help message]
+        --> [don't have to worry about environments anymore, just use full path]
+
+The reason for using python 3.10.4 is because one of the dependencies
+gevent doesn't have a wheel built for python 3.11 and trying to build it
+on sol was running into issues.
+

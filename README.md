@@ -3,8 +3,7 @@ This is a fork of Pheweb specifically for the Dog Aging Project (DAP)
 
 
 # How to Cite PheWeb
-If you use the PheWeb code base for your work, please cite our paper:
-
+This is a slight modification of the original PheWeb which should be cited:
 Gagliano Taliun, S.A., VandeHaar, P. et al. Exploring and visualizing large-scale genetic associations by using PheWeb. *Nat Genet* 52, 550–552 (2020).
 
 # How to Build a PheWeb for DAP data
@@ -14,62 +13,22 @@ Gagliano Taliun, S.A., VandeHaar, P. et al. Exploring and visualizing large-scal
 ```bash
 pip3 install pheweb
 ```
-
-- If that doesn't work, follow [the detailed install instructions](etc/detailed-install-instructions.md#detailed-install-instructions).
+If on ASU SOL cluster then read the "sol_install_notes.txt"
 
 ### 2. Create a directory and `config.py` for your new dataset
+Traditional PheWeb only works for hg19 or hg38, so I've hardcoded changes for dog.
+This means that the config.py isn't used, so might as well put hg19.
 
-```
-mkdir ~/my-new-pheweb && cd ~/my-new-pheweb
-```
+### 3. Convert MLMA files into csv files
+There are multiple options, but PheWeb expects files to look like:
 
-This directory will store all the files pheweb makes for your dataset. All `pheweb ...` commands should be run in this directory.
+    chrom,pos,ref,alt,pval
+    1,629,C,T,0.0856026
+    1,2076,G,T,0.835506
+    1,2388,C,T,0.0574887
 
-Make `config.py` in this directory. In it, either set `hg_build_number = 19` or `hg_build_number = 38`.  Other options you can set are listed [here](etc/detailed-loading-instructions.md#configuration-options).
-
-### 3. Check that your GWAS summary statistics files will work
-
-You need one file for each phenotype.  Most common GWAS file formats should work.  Here are the requirements:
-
-- It needs a header row.
-- Columns can be delimited by tabs, spaces, or commas.
-- It needs a column for the reference allele (which must always match the bases on the reference genome that you specified with `hg_build_number`) and a column for the alternate allele.  If you have a `MARKER_ID` column like `1:234_C/G`, that's okay too.  If you have an allele1 and allele2, and sometimes one or the other is the reference, then you'll need to modify your files.
-- It can be gzipped if you want.
-- Variants must be sorted by chromosome and position, with chromosomes in the order [1-22,X,Y,MT].
-
-The file must have columns for:
-
-| column description | name    | other allowed column names | allowed values |
-| ---                | ---     | ---                        | --- |
-| chromosome         | `chrom` | `#chrom`, `chr`            | 1-22, `X`, `Y`, `M`, `MT`, `chr1`, etc |
-| position           | `pos`   | `beg`, `begin`, `bp`       | integer |
-| reference allele   | `ref`   | `reference`                | must match reference genome |
-| alternate allele   | `alt`   | `alternate`                | anything |
-| p-value            | `pval`  | `pvalue`, `p`, `p.value`   | number in [0,1] |
-
-
-You may also have columns for:
-
-| column description                     | name           | other allowed column names | allowed values |
-| ---                                    | ---            | ---                        | --- |
-| minor allele frequency                 | `maf`          |                            | number in (0,0.5] |
-| allele frequency (of alternate allele) | `af`           | `a1freq`, `frq`            | number in (0,1) |
-| AF among cases                         | `case_af`      | `af.cases`                 | number in (0,1) |
-| AF among controls                      | `control_af`   | `af.controls`              | number in (0,1) |
-| allele count                           | `ac`           |                            | integer |
-| effect size (of alternate allele)      | `beta`         |                            | number |
-| standard error of effect size          | `sebeta`       | `se`                       | number |
-| odds ratio (of alternate allele)       | `or`           |                            | number |
-| R2                                     | `r2`           |                            | number |
-| number of samples                      | `num_samples`  | `ns`, `n`                  | integer, must be the same for every variant in its phenotype |
-| number of controls                     | `num_controls` | `ns.ctrl`, `n_controls`    | integer, must be the same for every variant in its phenotype |
-| number of cases                        | `num_cases`    | `ns.case`, `n_cases`       | integer, must be the same for every variant in its phenotype |
-
-
-Column names are case-insensitive.  If your file has a different column name, set `field_aliases = {"column_name": "field_name"}` in `config.py`.  For example, `field_aliases = {'P_BOLT_LMM_INF': 'pval', 'NSAMPLES': 'num_samples'}`.
-
-Any field can be null if it is one of ['', '.', 'NA', 'N/A', 'n/a', 'nan', '-nan', 'NaN', '-NaN', 'null', 'NULL'].  If a required field is null, the variant gets dropped.
-
+This conversion was done with a simple python script `mlma_to_csv.py`
+and the files were stored in the `mlmas/` subdir.
 
 ### 4. Make a list of your phenotypes
 
@@ -77,14 +36,27 @@ Inside of your data directory, you need a file named `pheno-list.json` that look
 
 ```json
 [
- {
-  "assoc_files": ["/home/peter/data/ear-length.gz"],
-  "phenocode": "ear-length"
- },
- {
-  "assoc_files": ["/home/peter/data/a1c.X.gz","/home/peter/data/a1c.autosomal.gz"],
-  "phenocode": "A1C"
- }
+    {
+        "assoc_files": [
+            "mlmas/DogAgingProject_gp-0.70_biallelic-snps_N-6358_maf-0.01_geno-0.05_hwe-1.0E-20-midp-keep-fewhet_phe-dd_weight_lbs_N-6279_cov-dd_sex_N-6279_qcov-Estimated_Age_Years_at_HLES_N-6279_chr1.loco.csv"
+        ],
+        "phenocode": "Weight",
+        "category": "Physical"
+    },
+    {
+        "assoc_files": [
+            "mlmas/DogAgingProject_gp-0.70_biallelic-snps_N-6358_maf-0.01_geno-0.05_hwe-1.0E-20-midp-keep-fewhet_phe-pa_activity_level_N-6279_cov-dd_sex_N-6279_qcov-Estimated_Age_Years_at_HLES-dd_weight_lbs_N-6279_chr1.loco.csv"
+        ],
+        "phenocode": "Activity level",
+        "category": "Activity"
+    },
+    {
+        "assoc_files": [
+            "mlmas/DogAgingProject_gp-0.70_biallelic-snps_N-6358_maf-0.01_mp_dental_extraction_N-1524_cov-dd_sex_N-6279_Estimated_Age_Years_at_HLES-dd_weight_lbs_N-6279_chr1.loco.csv"
+        ],
+        "phenocode": "Dental extraction",
+        "category": "Dental"
+    }
 ]
 ```
 
@@ -96,21 +68,6 @@ If you want, you can also include:
 - `category` (string): groups together phenotypes in the PheWAS plot. Shown in tables and tooltips.
 - `num_cases`, `num_controls`, and/or `num_samples` (number): if your input data only has `AC` or `MAC`, this will be used to calculated `AF` or `MAF`.  Shown in tooltips.  If your input data has correctly-named columns for these, the command `pheweb phenolist read-info-from-association-files` will add them into your existing `pheno-list.json`.
 - anything else you want, but you'll have to modify templates to use it.
-
-You can use a csv by running:
-
-```
-pheweb phenolist import-phenolist "/path/to/pheno-list.csv"
-```
-
-or you can make one from scratch by running:
-
-```
-pheweb phenolist glob --star-is-phenocode "/home/peter/data/*.gz"
-```
-
-You can see other methods [here](etc/detailed-loading-instructions.md#making-pheno-listjson).
-
 
 ### 5. Load your association files
 

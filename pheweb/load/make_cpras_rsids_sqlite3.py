@@ -12,6 +12,7 @@ def run(argv:List[str]) -> None:
         print('Make sqlite3 db for converting between chr-pos-ref-alt and rsid')
         exit(1)
 
+    print("GETTING STARTED WITH CPRAS")
     sites_filepath = Path(get_filepath('sites'))
     cpras_rsids_filepath = Path(get_filepath('cpras-rsids-sqlite3', must_exist=False))
 
@@ -29,14 +30,22 @@ def run(argv:List[str]) -> None:
                     else:
                         yield (cpra, None)
 
-        if cpras_rsids_filepath.exists(): cpras_rsids_filepath.unlink()
-        cpras_rsids_tmp_filepath = Path(get_tmp_path(cpras_rsids_filepath))
-        if cpras_rsids_tmp_filepath.exists(): cpras_rsids_tmp_filepath.unlink()
-        db_conn = sqlite3.connect(str(cpras_rsids_tmp_filepath))
-        with db_conn:
+        if cpras_rsids_filepath.exists():
+            print("ABOUT TO UNLINK", cpras_rsids_filepath)
+            cpras_rsids_filepath.unlink()
+
+        print("ABOUT TO CONNECT TO DB")
+        #RB NOTE: Changed this to open the db_conn in a "with" block
+        #RB NOTE: because the sql database wasn't closing automatically
+        #RB NOTE: so the renaming was failing because the file was open
+        #RB NOTE: but that didn't fix the error for some reason, so I just
+        #RB NOTE: removed the tmp_file approach, I don't see why it is necessary
+        with sqlite3.connect(str(cpras_rsids_filepath)) as db_conn:
             db_conn.execute('CREATE TABLE cpras_rsids (cpra TEXT, rsid TEXT)')
             db_conn.executemany('INSERT INTO cpras_rsids (cpra, rsid) VALUES (?,?)', get_cpra_rsid_pairs())
             db_conn.execute('CREATE INDEX rsid_idx ON cpras_rsids (rsid)')
 
-        cpras_rsids_tmp_filepath.rename(cpras_rsids_filepath)
+        print("AFTER DB OPERATIONS")
+
         print('Done making cpras-rsids sqlite3 at {}'.format(str(cpras_rsids_filepath)))
+
