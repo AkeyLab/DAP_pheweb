@@ -163,7 +163,10 @@ class Parallelizer:
         Yields things like: {type:"result", ...}
         '''
         if not tasks: return
-        n_procs = min(conf.get_num_procs(cmd), len(tasks))
+        #RB n_procs was too high, got "too many files open" error
+        #n_procs = min(conf.get_num_procs(cmd), len(tasks))
+        n_procs = 6
+
         taskq = multiprocessing.Queue()
         for task in tasks: taskq.put(task)
         for _ in range(n_procs): taskq.put({"exit":True})

@@ -8,7 +8,7 @@ from .load_utils import MaxPriorityQueue, parallelize_per_pheno, get_phenos_subs
 
 import argparse
 from typing import List,Dict,Any
-
+import sys
 
 NUM_VARIANTS = 100_000
 

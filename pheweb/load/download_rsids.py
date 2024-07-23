@@ -9,10 +9,11 @@ from .. import conf
 import shutil, wget, os
 from pathlib import Path
 from typing import List
-
+import sys
 
 def get_rsids_for_build(hg_build_number: int) -> None:
     print("TRYING")
+    sys.stdout.flush()
     dest_filepath = Path(get_filepath('rsids-hg{}'.format(hg_build_number), must_exist=False))
 
     # Check cache_dir

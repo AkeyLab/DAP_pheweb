@@ -58,12 +58,19 @@ def download_gene_aliases() -> None:
     aliases_filepath = Path(get_filepath('gene-aliases-sqlite3', must_exist=False))
     aliases_tmp_filepath = Path(get_tmp_path(aliases_filepath))
     print('gene aliases will be stored at {!r}'.format(str(aliases_filepath)))
-    if aliases_tmp_filepath.exists(): aliases_tmp_filepath.unlink()
-    db = sqlite3.connect(str(aliases_tmp_filepath))
-    with db:
+
+    if aliases_tmp_filepath.exists():
+        aliases_tmp_filepath.unlink()
+
+    #db = sqlite3.connect(str(aliases_tmp_filepath))
+    #with db:
+    #RB NOTE: trying to make the db only exist in the context manager and trying to skip temp
+    with sqlite3.connect(str(aliases_filepath)) as db:
         db.execute('CREATE TABLE gene_aliases (alias TEXT PRIMARY KEY, canonicals_comma TEXT)')
         db.executemany('INSERT INTO gene_aliases VALUES (?,?)', sorted(get_gene_aliases().items()))
-    aliases_tmp_filepath.replace(aliases_filepath)
+
+    #RB NOTE: this is causing a an (error 16) resource busy
+    #aliases_tmp_filepath.replace(aliases_filepath)
 
 def run(argv:List[str]) -> None:
     if '-h' in argv or '--help' in argv:

@@ -7,17 +7,17 @@ following commands which were run in this directory:
     * mamba create --prefix pheweb_env python=3.10.4
         --> [creates a new mamba env for pheweb]
 
-    * source activate /scratch/rbierma1/DAP_pheweb/pheweb_env
+    * source activate /scratch/rbierma1/DAP_pheweb_20240719/pheweb_env
         --> [activates the mamba env]
 
     * which pip
-        --> /scratch/rbierma1/DAP_pheweb/pheweb_env/bin/pip
+        --> /scratch/rbierma1/DAP_pheweb_20240719/pheweb_env/bin/pip
 
     * pip install -e .
         --> [install the local pheweb package in editable mode]
 
     * which pheweb
-        --> /scratch/rbierma1/DAP_pheweb/pheweb_env/bin/pheweb
+        --> /scratch/rbierma1/DAP_pheweb_20240719/pheweb_env/bin/pheweb
 
     * pheweb --help
         --> [successfully gives help message]
@@ -28,7 +28,7 @@ following commands which were run in this directory:
     * which pheweb
         --> [not found on path, this is ok]
 
-    * /scratch/rbierma1/DAP_pheweb/pheweb_env/bin/pheweb --help
+    * /scratch/rbierma1/DAP_pheweb_20240719/pheweb_env/bin/pheweb --help
         --> [successfully gives help message]
         --> [don't have to worry about environments anymore, just use full path]
 

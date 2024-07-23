@@ -5,6 +5,7 @@ from .load_utils import parallelize_per_pheno, get_phenos_subset, get_phenolist
 
 import argparse, os
 from typing import List,Dict,Any
+import sys
 
 def run(argv:List[str]) -> None:
     parser = argparse.ArgumentParser(description="annotate each phenotype by pulling in information from the combined sites file")

@@ -12,5 +12,5 @@
 #bash strict mode
 set -euo pipefail
 
-/scratch/rbierma1/DAP_pheweb/pheweb_env/bin/pheweb process
+/scratch/rbierma1/DAP_pheweb_20240719/pheweb_env/bin/pheweb process
 
