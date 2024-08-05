@@ -13,7 +13,7 @@ df['fname'] = df['fpath'].apply(os.path.basename)
 df['phenotype'] = df['fname'].str.split('_N-').str[0]
 
 #get the categories and merge into the df
-cats = pd.read_table('metadata/phenotype_categories.tsv')
+cats = pd.read_table('metadata/phenotype_categories_display_names.tsv')
 
 rows_before_merge = len(df.shape)
 
@@ -24,7 +24,7 @@ assert rows_before_merge == rows_after_merge
 assert not df.isnull().any().any()
 
 #get the sample_size and merge into the df
-sample_size = pd.read_table('metadata/DAP_phenotypes_291_gwas_sample_sizes.tsv')
+sample_size = pd.read_table('metadata/DAP_phenotypes_325_gwas_sample_sizes.tsv')
 
 rows_before_merge = len(df.shape)
 
@@ -38,7 +38,7 @@ json_data = []
 for i,r in df.iterrows():
     json_data.append({
         'assoc_files': [ r['fpath'] ],
-        'phenocode': r['phenotype'],
+        'phenocode': r['phenotype_display_name'],
         'category': r['category'],
         'num_samples': r['sample_size'],
     })
