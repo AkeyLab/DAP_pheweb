@@ -4,7 +4,7 @@
             "data/afus_dora_1_excited_food_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_1_excited_food",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -12,7 +12,7 @@
             "data/afus_dora_10_runs_around_alot_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_10_runs_around_alot",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -20,7 +20,7 @@
             "data/afus_dora_11_interested_eating_after_meal_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_11_interested_eating_after_meal",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -28,7 +28,7 @@
             "data/afus_dora_12_slow_eater_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_12_slow_eater",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -36,7 +36,7 @@
             "data/afus_dora_13_eats_treats_quickly_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_13_eats_treats_quickly",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -44,7 +44,7 @@
             "data/afus_dora_14_human_food_during_meals_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_14_human_food_during_meals",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -52,7 +52,7 @@
             "data/afus_dora_15_eat_anything_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_15_eat_anything",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -60,7 +60,7 @@
             "data/afus_dora_16_very_fit_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_16_very_fit",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -68,7 +68,7 @@
             "data/afus_dora_17_human_food_often_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_17_human_food_often",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -76,7 +76,7 @@
             "data/afus_dora_18_upset_stomach_some_foods_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_18_upset_stomach_some_foods",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -84,7 +84,7 @@
             "data/afus_dora_19_should_lose_weight_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_19_should_lose_weight",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -92,7 +92,7 @@
             "data/afus_dora_2_most_walks_off_leash_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_2_most_walks_off_leash",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -100,7 +100,7 @@
             "data/afus_dora_20_most_walks_on_leash_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_20_most_walks_on_leash",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -108,7 +108,7 @@
             "data/afus_dora_22_diet_to_control_weight_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_22_diet_to_control_weight",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -116,7 +116,7 @@
             "data/afus_dora_23_hungry_all_time_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_23_hungry_all_time",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -124,7 +124,7 @@
             "data/afus_dora_24_walks_high_energy_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_24_walks_high_energy",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -132,7 +132,7 @@
             "data/afus_dora_25_careful_dogs_weight_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_25_careful_dogs_weight",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -140,7 +140,7 @@
             "data/afus_dora_26_sensitive_stomach_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_26_sensitive_stomach",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -148,7 +148,7 @@
             "data/afus_dora_27_very_greedy_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_27_very_greedy",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -156,7 +156,7 @@
             "data/afus_dora_28_vet_often_for_health_problems_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_28_vet_often_for_health_problems",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -164,7 +164,7 @@
             "data/afus_dora_29_happy_dogs_weight_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_29_happy_dogs_weight",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -172,7 +172,7 @@
             "data/afus_dora_3_human_leftovers_in_bowl_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_3_human_leftovers_in_bowl",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -180,7 +180,7 @@
             "data/afus_dora_30_measure_dogs_food_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_30_measure_dogs_food",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -188,7 +188,7 @@
             "data/afus_dora_31_regulate_exercise_for_weight_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_31_regulate_exercise_for_weight",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -196,7 +196,7 @@
             "data/afus_dora_32_gets_lots_of_exercise_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_32_gets_lots_of_exercise",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -204,7 +204,7 @@
             "data/afus_dora_33_upset_stomach_often_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_33_upset_stomach_often",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -212,7 +212,7 @@
             "data/afus_dora_34_no_human_food_during_meals_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_34_no_human_food_during_meals",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -220,7 +220,7 @@
             "data/afus_dora_35_eat_non_food_objects_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_35_eat_non_food_objects",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -228,7 +228,7 @@
             "data/afus_dora_4_waits_for_scraps_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_4_waits_for_scraps",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -236,7 +236,7 @@
             "data/afus_dora_5_choosy_treats_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_5_choosy_treats",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -244,7 +244,7 @@
             "data/afus_dora_6_waits_during_food_prep_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_6_waits_during_food_prep",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -252,7 +252,7 @@
             "data/afus_dora_7_turns_down_food_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_7_turns_down_food",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -260,7 +260,7 @@
             "data/afus_dora_8_finishes_meal_quickly_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_8_finishes_meal_quickly",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -268,7 +268,7 @@
             "data/afus_dora_9_inspects_unfamilar_foods_N-4895.loco.csv"
         ],
         "phenocode": "afus_dora_9_inspects_unfamilar_foods",
-        "category": "survey",
+        "category": "Eating Behavior",
         "num_samples": 4789
     },
     {
@@ -276,7 +276,7 @@
             "data/afus_mdors_1_play_games_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_1_play_games",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -284,7 +284,7 @@
             "data/afus_mdors_10_get_through_tough_times_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_10_get_through_tough_times",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -292,7 +292,7 @@
             "data/afus_mdors_11_dog_for_comfort_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_11_dog_for_comfort",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -300,7 +300,7 @@
             "data/afus_mdors_12_close_proximity_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_12_close_proximity",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -308,7 +308,7 @@
             "data/afus_mdors_13_constant_companionship_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_13_constant_companionship",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -316,7 +316,7 @@
             "data/afus_mdors_14_there_for_me_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_14_there_for_me",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -324,7 +324,7 @@
             "data/afus_mdors_15_reason_to_get_up_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_15_reason_to_get_up",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -332,7 +332,7 @@
             "data/afus_mdors_16_never_apart_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_16_never_apart",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -340,7 +340,7 @@
             "data/afus_mdors_17_constantly_attentive_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_17_constantly_attentive",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -348,7 +348,7 @@
             "data/afus_mdors_18_share_secrets_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_18_share_secrets",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -356,7 +356,7 @@
             "data/afus_mdors_19_trauma_of_death_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_19_trauma_of_death",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -364,7 +364,7 @@
             "data/afus_mdors_2_treats_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_2_treats",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -372,7 +372,7 @@
             "data/afus_mdors_20_care_is_chore_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_20_care_is_chore",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -380,7 +380,7 @@
             "data/afus_mdors_21_interferes_with_activities_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_21_interferes_with_activities",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -388,7 +388,7 @@
             "data/afus_mdors_23_annoying_to_change_plans_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_23_annoying_to_change_plans",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -396,7 +396,7 @@
             "data/afus_mdors_24_stopped_enjoyable_activities_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_24_stopped_enjoyable_activities",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -404,7 +404,7 @@
             "data/afus_mdors_25_dont_like_ownership_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_25_dont_like_ownership",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -412,7 +412,7 @@
             "data/afus_mdors_26_makes_mess_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_26_makes_mess",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -420,7 +420,7 @@
             "data/afus_mdors_27_costs_money_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_27_costs_money",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -428,7 +428,7 @@
             "data/afus_mdors_28_hard_to_care_for_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_28_hard_to_care_for",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -436,7 +436,7 @@
             "data/afus_mdors_3_kiss_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_3_kiss",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -444,7 +444,7 @@
             "data/afus_mdors_4_dog_in_car_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_4_dog_in_car",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -452,7 +452,7 @@
             "data/afus_mdors_7_grooming_frequency_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_7_grooming_frequency",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -460,7 +460,7 @@
             "data/afus_mdors_8_visiting_other_people_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_8_visiting_other_people",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -468,7 +468,7 @@
             "data/afus_mdors_9_buy_presents_N-4915.loco.csv"
         ],
         "phenocode": "afus_mdors_9_buy_presents",
-        "category": "survey",
+        "category": "Dog Owner Relationship",
         "num_samples": 4789
     },
     {
@@ -476,7 +476,7 @@
             "data/cslb_active_6mo_N-6773.loco.csv"
         ],
         "phenocode": "cslb_active_6mo",
-        "category": "survey",
+        "category": "Canine Social and Learned Behavior",
         "num_samples": 6773
     },
     {
@@ -484,7 +484,7 @@
             "data/cslb_avoid_N-6773.loco.csv"
         ],
         "phenocode": "cslb_avoid",
-        "category": "survey",
+        "category": "Canine Social and Learned Behavior",
         "num_samples": 6773
     },
     {
@@ -492,7 +492,7 @@
             "data/cslb_find_food_N-6773.loco.csv"
         ],
         "phenocode": "cslb_find_food",
-        "category": "survey",
+        "category": "Canine Social and Learned Behavior",
         "num_samples": 6773
     },
     {
@@ -500,7 +500,7 @@
             "data/cslb_pace_N-6773.loco.csv"
         ],
         "phenocode": "cslb_pace",
-        "category": "survey",
+        "category": "Canine Social and Learned Behavior",
         "num_samples": 6773
     },
     {
@@ -508,7 +508,7 @@
             "data/db_aggression_level_delivery_workers_at_home_N-7328.loco.csv"
         ],
         "phenocode": "db_aggression_level_delivery_workers_at_home",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7328
     },
     {
@@ -516,7 +516,7 @@
             "data/db_aggression_level_familiar_dog_while_eating_N-4692.loco.csv"
         ],
         "phenocode": "db_aggression_level_familiar_dog_while_eating",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 4692
     },
     {
@@ -524,7 +524,7 @@
             "data/db_aggression_level_familiar_dog_while_playing_N-4902.loco.csv"
         ],
         "phenocode": "db_aggression_level_familiar_dog_while_playing",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 4902
     },
     {
@@ -532,7 +532,7 @@
             "data/db_aggression_level_on_leash_unknown_dog_N-7310.loco.csv"
         ],
         "phenocode": "db_aggression_level_on_leash_unknown_dog",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7310
     },
     {
@@ -540,7 +540,7 @@
             "data/db_aggression_level_on_leash_unknown_human_N-7342.loco.csv"
         ],
         "phenocode": "db_aggression_level_on_leash_unknown_human",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7342
     },
     {
@@ -548,7 +548,7 @@
             "data/db_aggression_level_unknown_aggressive_dog_N-7219.loco.csv"
         ],
         "phenocode": "db_aggression_level_unknown_aggressive_dog",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7219
     },
     {
@@ -556,7 +556,7 @@
             "data/db_aggression_level_unknown_human_near_yard_N-7313.loco.csv"
         ],
         "phenocode": "db_aggression_level_unknown_human_near_yard",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7313
     },
     {
@@ -564,7 +564,7 @@
             "data/db_attention_seeking_follows_humans_frequency_N-7365.loco.csv"
         ],
         "phenocode": "db_attention_seeking_follows_humans_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7365
     },
     {
@@ -572,7 +572,7 @@
             "data/db_attention_seeking_sits_close_to_humans_frequency_N-7372.loco.csv"
         ],
         "phenocode": "db_attention_seeking_sits_close_to_humans_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7372
     },
     {
@@ -580,7 +580,7 @@
             "data/db_barks_frequency_N-7370.loco.csv"
         ],
         "phenocode": "db_barks_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7370
     },
     {
@@ -588,7 +588,7 @@
             "data/db_chases_birds_frequency_N-7346.loco.csv"
         ],
         "phenocode": "db_chases_birds_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7346
     },
     {
@@ -596,7 +596,7 @@
             "data/db_chases_squirrels_frequency_N-7313.loco.csv"
         ],
         "phenocode": "db_chases_squirrels_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7313
     },
     {
@@ -604,7 +604,7 @@
             "data/db_chases_tail_frequency_N-7342.loco.csv"
         ],
         "phenocode": "db_chases_tail_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7342
     },
     {
@@ -612,7 +612,7 @@
             "data/db_chews_inappropriate_objects_frequency_N-7350.loco.csv"
         ],
         "phenocode": "db_chews_inappropriate_objects_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7350
     },
     {
@@ -620,7 +620,7 @@
             "data/db_energetic_frequency_N-7325.loco.csv"
         ],
         "phenocode": "db_energetic_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7325
     },
     {
@@ -628,7 +628,7 @@
             "data/db_escapes_home_or_property_frequency_N-7299.loco.csv"
         ],
         "phenocode": "db_escapes_home_or_property_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7299
     },
     {
@@ -636,7 +636,7 @@
             "data/db_excitement_level_before_car_ride_N-7358.loco.csv"
         ],
         "phenocode": "db_excitement_level_before_car_ride",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7358
     },
     {
@@ -644,7 +644,7 @@
             "data/db_excitement_level_before_walk_N-7355.loco.csv"
         ],
         "phenocode": "db_excitement_level_before_walk",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7355
     },
     {
@@ -652,7 +652,7 @@
             "data/db_fear_level_bathed_at_home_N-7281.loco.csv"
         ],
         "phenocode": "db_fear_level_bathed_at_home",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7281
     },
     {
@@ -660,7 +660,7 @@
             "data/db_fear_level_loud_noises_N-7352.loco.csv"
         ],
         "phenocode": "db_fear_level_loud_noises",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7352
     },
     {
@@ -668,7 +668,7 @@
             "data/db_fear_level_nails_clipped_at_home_N-6993.loco.csv"
         ],
         "phenocode": "db_fear_level_nails_clipped_at_home",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 6993
     },
     {
@@ -676,7 +676,7 @@
             "data/db_fear_level_unknown_aggressive_dog_N-7210.loco.csv"
         ],
         "phenocode": "db_fear_level_unknown_aggressive_dog",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7210
     },
     {
@@ -684,7 +684,7 @@
             "data/db_fear_level_unknown_dogs_N-7302.loco.csv"
         ],
         "phenocode": "db_fear_level_unknown_dogs",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7302
     },
     {
@@ -692,7 +692,7 @@
             "data/db_fear_level_unknown_human_away_from_home_N-7324.loco.csv"
         ],
         "phenocode": "db_fear_level_unknown_human_away_from_home",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7324
     },
     {
@@ -700,7 +700,7 @@
             "data/db_fear_level_unknown_human_touch_N-7334.loco.csv"
         ],
         "phenocode": "db_fear_level_unknown_human_touch",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7334
     },
     {
@@ -708,7 +708,7 @@
             "data/db_fear_level_unknown_objects_outside_N-7338.loco.csv"
         ],
         "phenocode": "db_fear_level_unknown_objects_outside",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7338
     },
     {
@@ -716,7 +716,7 @@
             "data/db_fear_level_unknown_situations_N-7331.loco.csv"
         ],
         "phenocode": "db_fear_level_unknown_situations",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7331
     },
     {
@@ -724,7 +724,7 @@
             "data/db_hyperactive_frequency_N-7343.loco.csv"
         ],
         "phenocode": "db_hyperactive_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7343
     },
     {
@@ -732,7 +732,7 @@
             "data/db_left_alone_barking_frequency_N-7355.loco.csv"
         ],
         "phenocode": "db_left_alone_barking_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7355
     },
     {
@@ -740,7 +740,7 @@
             "data/db_left_alone_restlessness_frequency_N-7310.loco.csv"
         ],
         "phenocode": "db_left_alone_restlessness_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7310
     },
     {
@@ -748,7 +748,7 @@
             "data/db_left_alone_scratching_frequency_N-7353.loco.csv"
         ],
         "phenocode": "db_left_alone_scratching_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7353
     },
     {
@@ -756,7 +756,7 @@
             "data/db_playful_frequency_N-7362.loco.csv"
         ],
         "phenocode": "db_playful_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7362
     },
     {
@@ -764,7 +764,7 @@
             "data/db_pulls_leash_frequency_N-7318.loco.csv"
         ],
         "phenocode": "db_pulls_leash_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7318
     },
     {
@@ -772,7 +772,7 @@
             "data/db_training_distraction_frequency_N-7370.loco.csv"
         ],
         "phenocode": "db_training_distraction_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7370
     },
     {
@@ -780,7 +780,7 @@
             "data/db_training_obeys_sit_command_frequency_N-7353.loco.csv"
         ],
         "phenocode": "db_training_obeys_sit_command_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7353
     },
     {
@@ -788,7 +788,7 @@
             "data/db_training_obeys_stay_command_frequency_N-7302.loco.csv"
         ],
         "phenocode": "db_training_obeys_stay_command_frequency",
-        "category": "survey",
+        "category": "Dog Behavior",
         "num_samples": 7302
     },
     {
@@ -796,7 +796,7 @@
             "data/dd_weight_lbs_N-7378.loco.csv"
         ],
         "phenocode": "dd_weight_lbs",
-        "category": "survey",
+        "category": "Dog Demographics",
         "num_samples": 7378
     },
     {
@@ -804,7 +804,7 @@
             "data/de_air_cleaner_present_N-7335.loco.csv"
         ],
         "phenocode": "de_air_cleaner_present",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7335
     },
     {
@@ -812,7 +812,7 @@
             "data/de_air_freshener_present_N-7338.loco.csv"
         ],
         "phenocode": "de_air_freshener_present",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7338
     },
     {
@@ -820,7 +820,7 @@
             "data/de_daytime_sleep_avg_hours_N-6623.loco.csv"
         ],
         "phenocode": "de_daytime_sleep_avg_hours",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 6623
     },
     {
@@ -828,7 +828,7 @@
             "data/de_drinks_outdoor_water_frequency_N-7378.loco.csv"
         ],
         "phenocode": "de_drinks_outdoor_water_frequency",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7378
     },
     {
@@ -836,7 +836,7 @@
             "data/de_drinks_outdoor_water_N-7378.loco.csv"
         ],
         "phenocode": "de_drinks_outdoor_water",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7378
     },
     {
@@ -844,7 +844,7 @@
             "data/de_eats_feces_N-7073.loco.csv"
         ],
         "phenocode": "de_eats_feces",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7073
     },
     {
@@ -852,7 +852,7 @@
             "data/de_eats_grass_frequency_N-7378.loco.csv"
         ],
         "phenocode": "de_eats_grass_frequency",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7378
     },
     {
@@ -860,7 +860,7 @@
             "data/de_gas_fireplace_present_N-7346.loco.csv"
         ],
         "phenocode": "de_gas_fireplace_present",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7346
     },
     {
@@ -868,7 +868,7 @@
             "data/de_hepa_present_N-7097.loco.csv"
         ],
         "phenocode": "de_hepa_present",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7097
     },
     {
@@ -876,7 +876,7 @@
             "data/de_incense_present_N-7354.loco.csv"
         ],
         "phenocode": "de_incense_present",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7354
     },
     {
@@ -884,7 +884,7 @@
             "data/de_interacts_with_neighborhood_animals_N-7378.loco.csv"
         ],
         "phenocode": "de_interacts_with_neighborhood_animals",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7378
     },
     {
@@ -892,7 +892,7 @@
             "data/de_interacts_with_neighborhood_humans_N-7378.loco.csv"
         ],
         "phenocode": "de_interacts_with_neighborhood_humans",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7378
     },
     {
@@ -900,7 +900,7 @@
             "data/de_licks_chews_or_plays_with_non_toys_N-7378.loco.csv"
         ],
         "phenocode": "de_licks_chews_or_plays_with_non_toys",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7378
     },
     {
@@ -908,7 +908,7 @@
             "data/de_nighttime_sleep_avg_hours_N-7240.loco.csv"
         ],
         "phenocode": "de_nighttime_sleep_avg_hours",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7240
     },
     {
@@ -916,7 +916,7 @@
             "data/de_recent_toxins_or_hazards_ingested_frequency_N-7378.loco.csv"
         ],
         "phenocode": "de_recent_toxins_or_hazards_ingested_frequency",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7378
     },
     {
@@ -924,7 +924,7 @@
             "data/de_wood_fireplace_present_N-7344.loco.csv"
         ],
         "phenocode": "de_wood_fireplace_present",
-        "category": "survey",
+        "category": "Dog Environment",
         "num_samples": 7344
     },
     {
@@ -932,7 +932,7 @@
             "data/df_appetite_N-6965.loco.csv"
         ],
         "phenocode": "df_appetite",
-        "category": "survey",
+        "category": "Diet",
         "num_samples": 6965
     },
     {
@@ -940,7 +940,7 @@
             "data/df_daily_supplements_N-6965.loco.csv"
         ],
         "phenocode": "df_daily_supplements",
-        "category": "survey",
+        "category": "Diet",
         "num_samples": 6965
     },
     {
@@ -948,7 +948,7 @@
             "data/df_ever_overweight_N-6660.loco.csv"
         ],
         "phenocode": "df_ever_overweight",
-        "category": "survey",
+        "category": "Diet",
         "num_samples": 6660
     },
     {
@@ -956,7 +956,7 @@
             "data/df_feedings_per_day_N-6965.loco.csv"
         ],
         "phenocode": "df_feedings_per_day",
-        "category": "survey",
+        "category": "Diet",
         "num_samples": 6965
     },
     {
@@ -964,7 +964,7 @@
             "data/df_secondary_diet_component_used_N-6965.loco.csv"
         ],
         "phenocode": "df_secondary_diet_component_used",
-        "category": "survey",
+        "category": "Diet",
         "num_samples": 6965
     },
     {
@@ -972,7 +972,7 @@
             "data/df_treats_frequency_N-6965.loco.csv"
         ],
         "phenocode": "df_treats_frequency",
-        "category": "survey",
+        "category": "Diet",
         "num_samples": 6965
     },
     {
@@ -980,7 +980,7 @@
             "data/hs_chronic_condition_present_N-7378.loco.csv"
         ],
         "phenocode": "hs_chronic_condition_present",
-        "category": "survey",
+        "category": "Health Status",
         "num_samples": 7378
     },
     {
@@ -988,7 +988,7 @@
             "data/hs_chronic_condition_recently_changed_or_treated_N-1853.loco.csv"
         ],
         "phenocode": "hs_chronic_condition_recently_changed_or_treated",
-        "category": "survey",
+        "category": "Health Status",
         "num_samples": 1853
     },
     {
@@ -996,7 +996,7 @@
             "data/hs_general_health_N-7378.loco.csv"
         ],
         "phenocode": "hs_general_health",
-        "category": "survey",
+        "category": "Health Status",
         "num_samples": 7378
     },
     {
@@ -1004,7 +1004,7 @@
             "data/hs_new_condition_diagnosed_last_month_N-855.loco.csv"
         ],
         "phenocode": "hs_new_condition_diagnosed_last_month",
-        "category": "survey",
+        "category": "Health Status",
         "num_samples": 855
     },
     {
@@ -1012,7 +1012,7 @@
             "data/mp_dental_extraction_N-1746.loco.csv"
         ],
         "phenocode": "mp_dental_extraction",
-        "category": "survey",
+        "category": "Medication and Preventatives",
         "num_samples": 1746
     },
     {
@@ -1020,7 +1020,7 @@
             "data/mp_dental_procedure_undergone_N-7378.loco.csv"
         ],
         "phenocode": "mp_dental_procedure_undergone",
-        "category": "survey",
+        "category": "Medication and Preventatives",
         "num_samples": 7378
     },
     {
@@ -1028,7 +1028,7 @@
             "data/pa_activity_level_N-7378.loco.csv"
         ],
         "phenocode": "pa_activity_level",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 7378
     },
     {
@@ -1036,7 +1036,7 @@
             "data/pa_avg_activity_intensity_N-7378.loco.csv"
         ],
         "phenocode": "pa_avg_activity_intensity",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 7378
     },
     {
@@ -1044,7 +1044,7 @@
             "data/pa_avg_daily_active_hours_N-7378.loco.csv"
         ],
         "phenocode": "pa_avg_daily_active_hours",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 7378
     },
     {
@@ -1052,7 +1052,7 @@
             "data/pa_cold_weather_daily_hours_outside_N-6334.loco.csv"
         ],
         "phenocode": "pa_cold_weather_daily_hours_outside",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 6334
     },
     {
@@ -1060,7 +1060,7 @@
             "data/pa_hot_weather_daily_hours_outside_N-6877.loco.csv"
         ],
         "phenocode": "pa_hot_weather_daily_hours_outside",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 6877
     },
     {
@@ -1068,7 +1068,7 @@
             "data/pa_moderate_weather_daily_hours_outside_N-7377.loco.csv"
         ],
         "phenocode": "pa_moderate_weather_daily_hours_outside",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 7377
     },
     {
@@ -1076,7 +1076,7 @@
             "data/pa_off_leash_walk_average_pace_pct_N-2975.loco.csv"
         ],
         "phenocode": "pa_off_leash_walk_average_pace_pct",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 2975
     },
     {
@@ -1084,7 +1084,7 @@
             "data/pa_off_leash_walk_avg_hours_N-2975.loco.csv"
         ],
         "phenocode": "pa_off_leash_walk_avg_hours",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 2975
     },
     {
@@ -1092,7 +1092,7 @@
             "data/pa_off_leash_walk_brisk_pace_pct_N-2975.loco.csv"
         ],
         "phenocode": "pa_off_leash_walk_brisk_pace_pct",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 2975
     },
     {
@@ -1100,7 +1100,7 @@
             "data/pa_off_leash_walk_frequency_N-7378.loco.csv"
         ],
         "phenocode": "pa_off_leash_walk_frequency",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 7378
     },
     {
@@ -1108,7 +1108,7 @@
             "data/pa_off_leash_walk_in_enclosed_area_N-2975.loco.csv"
         ],
         "phenocode": "pa_off_leash_walk_in_enclosed_area",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 2975
     },
     {
@@ -1116,7 +1116,7 @@
             "data/pa_off_leash_walk_in_open_area_N-2975.loco.csv"
         ],
         "phenocode": "pa_off_leash_walk_in_open_area",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 2975
     },
     {
@@ -1124,7 +1124,7 @@
             "data/pa_off_leash_walk_returns_when_called_frequency_N-2975.loco.csv"
         ],
         "phenocode": "pa_off_leash_walk_returns_when_called_frequency",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 2975
     },
     {
@@ -1132,7 +1132,7 @@
             "data/pa_off_leash_walk_run_pace_pct_N-2975.loco.csv"
         ],
         "phenocode": "pa_off_leash_walk_run_pace_pct",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 2975
     },
     {
@@ -1140,7 +1140,7 @@
             "data/pa_on_leash_walk_average_pace_pct_N-7110.loco.csv"
         ],
         "phenocode": "pa_on_leash_walk_average_pace_pct",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 7110
     },
     {
@@ -1148,7 +1148,7 @@
             "data/pa_on_leash_walk_avg_hours_N-7110.loco.csv"
         ],
         "phenocode": "pa_on_leash_walk_avg_hours",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 7110
     },
     {
@@ -1156,7 +1156,7 @@
             "data/pa_on_leash_walk_brisk_pace_pct_N-7110.loco.csv"
         ],
         "phenocode": "pa_on_leash_walk_brisk_pace_pct",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 7110
     },
     {
@@ -1164,7 +1164,7 @@
             "data/pa_on_leash_walk_frequency_N-7378.loco.csv"
         ],
         "phenocode": "pa_on_leash_walk_frequency",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 7378
     },
     {
@@ -1172,7 +1172,7 @@
             "data/pa_other_aerobic_activity_avg_hours_N-3614.loco.csv"
         ],
         "phenocode": "pa_other_aerobic_activity_avg_hours",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 3614
     },
     {
@@ -1180,7 +1180,7 @@
             "data/pa_other_aerobic_activity_avg_intensity_N-3614.loco.csv"
         ],
         "phenocode": "pa_other_aerobic_activity_avg_intensity",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 3614
     },
     {
@@ -1188,7 +1188,7 @@
             "data/pa_other_aerobic_activity_frequency_N-7378.loco.csv"
         ],
         "phenocode": "pa_other_aerobic_activity_frequency",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 7378
     },
     {
@@ -1196,7 +1196,7 @@
             "data/pa_physical_games_frequency_N-7378.loco.csv"
         ],
         "phenocode": "pa_physical_games_frequency",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 7378
     },
     {
@@ -1204,7 +1204,7 @@
             "data/pa_swim_cold_weather_frequency_N-1920.loco.csv"
         ],
         "phenocode": "pa_swim_cold_weather_frequency",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 1920
     },
     {
@@ -1212,7 +1212,7 @@
             "data/pa_swim_hot_weather_frequency_N-2005.loco.csv"
         ],
         "phenocode": "pa_swim_hot_weather_frequency",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 2005
     },
     {
@@ -1220,7 +1220,7 @@
             "data/pa_swim_moderate_weather_frequency_N-2325.loco.csv"
         ],
         "phenocode": "pa_swim_moderate_weather_frequency",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 2325
     },
     {
@@ -1228,7 +1228,7 @@
             "data/pa_swim_N-7378.loco.csv"
         ],
         "phenocode": "pa_swim",
-        "category": "survey",
+        "category": "Physical Activity",
         "num_samples": 7378
     },
     {
@@ -1236,7 +1236,7 @@
             "data/krt_cbc_abs_eosinophils_sqrt_transformed_N-957.loco.csv"
         ],
         "phenocode": "absolute_eosinophils",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 918
     },
     {
@@ -1244,7 +1244,7 @@
             "data/krt_cbc_abs_lymphocytes_sqrt_transformed_N-957.loco.csv"
         ],
         "phenocode": "absolute_lymphocytes",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 918
     },
     {
@@ -1252,7 +1252,7 @@
             "data/krt_cbc_abs_monocytes_sqrt_transformed_N-957.loco.csv"
         ],
         "phenocode": "absolute_monocytes",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 918
     },
     {
@@ -1260,7 +1260,7 @@
             "data/krt_cbc_abs_neutrophils_sqrt_transformed_N-957.loco.csv"
         ],
         "phenocode": "absolute_neutrophils",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 918
     },
     {
@@ -1268,7 +1268,7 @@
             "data/krt_cbc_hct_sqrt_transformed_N-962.loco.csv"
         ],
         "phenocode": "hematocrit",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 923
     },
     {
@@ -1276,7 +1276,7 @@
             "data/krt_cbc_hgb_sqrt_transformed_N-962.loco.csv"
         ],
         "phenocode": "hemoglobin",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 923
     },
     {
@@ -1284,7 +1284,7 @@
             "data/krt_cbc_mch_sqrt_transformed_N-962.loco.csv"
         ],
         "phenocode": "mean_corpuscular_hemoglobin",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 923
     },
     {
@@ -1292,7 +1292,7 @@
             "data/krt_cbc_mchc_sqrt_transformed_N-962.loco.csv"
         ],
         "phenocode": "mean_corpuscular_hemoglobin_concentration",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 923
     },
     {
@@ -1300,7 +1300,7 @@
             "data/krt_cbc_mcv_sqrt_transformed_N-962.loco.csv"
         ],
         "phenocode": "mean_corpuscular_volume",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 923
     },
     {
@@ -1308,7 +1308,7 @@
             "data/krt_cbc_mpv_sqrt_transformed_N-957.loco.csv"
         ],
         "phenocode": "mean_platelet_volume",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 919
     },
     {
@@ -1316,7 +1316,7 @@
             "data/krt_cbc_pct_sqrt_transformed_N-957.loco.csv"
         ],
         "phenocode": "plateletcrit",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 919
     },
     {
@@ -1324,7 +1324,7 @@
             "data/krt_cbc_plt_sqrt_transformed_N-746.loco.csv"
         ],
         "phenocode": "platelet",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 715
     },
     {
@@ -1332,7 +1332,7 @@
             "data/krt_cbc_rbc_sqrt_transformed_N-962.loco.csv"
         ],
         "phenocode": "red_blood_cells",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 923
     },
     {
@@ -1340,7 +1340,7 @@
             "data/krt_cbc_rdw_sqrt_transformed_N-962.loco.csv"
         ],
         "phenocode": "red_blood_cell_width_distribution",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 923
     },
     {
@@ -1348,7 +1348,7 @@
             "data/krt_cbc_rel_eosinophils_sqrt_transformed_N-957.loco.csv"
         ],
         "phenocode": "relative_eosinophils",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 918
     },
     {
@@ -1356,7 +1356,7 @@
             "data/krt_cbc_rel_lymphocytes_sqrt_transformed_N-957.loco.csv"
         ],
         "phenocode": "relative_lymphocytes",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 918
     },
     {
@@ -1364,7 +1364,7 @@
             "data/krt_cbc_rel_monocytes_sqrt_transformed_N-957.loco.csv"
         ],
         "phenocode": "relative_monocytes",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 918
     },
     {
@@ -1372,7 +1372,7 @@
             "data/krt_cbc_rel_neutrophils_sqrt_transformed_N-957.loco.csv"
         ],
         "phenocode": "relative_neutrophils",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 918
     },
     {
@@ -1380,7 +1380,7 @@
             "data/krt_cbc_retic_abs_sqrt_transformed_N-961.loco.csv"
         ],
         "phenocode": "absolute_reticulocyte",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 922
     },
     {
@@ -1388,7 +1388,7 @@
             "data/krt_cbc_total_wbcs_sqrt_transformed_N-962.loco.csv"
         ],
         "phenocode": "total_white_blood_cells",
-        "category": "blood",
+        "category": "Complete Blood Count (CBC)",
         "num_samples": 923
     },
     {
@@ -1396,7 +1396,7 @@
             "data/krt_cp_alb_glob_ratio_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "albumin_globulin_ratio",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1404,7 +1404,7 @@
             "data/krt_cp_albumin_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "albumin",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1412,7 +1412,7 @@
             "data/krt_cp_alkp_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "alkaline_phosphatase",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1420,7 +1420,7 @@
             "data/krt_cp_alt_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "alanine_aminotransferase",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1428,7 +1428,7 @@
             "data/krt_cp_amylase_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "amylase",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1436,7 +1436,7 @@
             "data/krt_cp_bilirubin_total_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "total_bilirubin",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1444,7 +1444,7 @@
             "data/krt_cp_bun_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "blood_urea_nitrogen",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1452,7 +1452,7 @@
             "data/krt_cp_chloride_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "chloride",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1460,7 +1460,7 @@
             "data/krt_cp_cholesterol_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "cholesterol",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1468,7 +1468,7 @@
             "data/krt_cp_creatinine_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "creatinine",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1476,7 +1476,7 @@
             "data/krt_cp_globulins_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "globulins",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1484,7 +1484,7 @@
             "data/krt_cp_magnesium_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "magnesium",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1492,7 +1492,7 @@
             "data/krt_cp_potassium_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "potassium",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1500,7 +1500,7 @@
             "data/krt_cp_sodium_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "sodium",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1508,7 +1508,7 @@
             "data/krt_cp_sp_ratio_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "sodium_potassium_ratio",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1516,7 +1516,7 @@
             "data/krt_cp_total_protein_value_ln_transformed_N-971.loco.csv"
         ],
         "phenocode": "total_protein",
-        "category": "blood",
+        "category": "Blood Chemistry Panel",
         "num_samples": 953
     },
     {
@@ -1524,7 +1524,7 @@
             "data/1-3-Methylhistidine_N-936.loco.csv"
         ],
         "phenocode": "1-3-Methylhistidine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1532,7 +1532,7 @@
             "data/1-Methylnicotinamide_N-936.loco.csv"
         ],
         "phenocode": "1-Methylnicotinamide",
-        "category": "metabolite",
+        "category": "Pyridine alkaloids",
         "num_samples": 924
     },
     {
@@ -1540,7 +1540,7 @@
             "data/2-Aminoadipate_N-936.loco.csv"
         ],
         "phenocode": "2-Aminoadipate",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1548,7 +1548,7 @@
             "data/2-Hydroxyglutarate_N-936.loco.csv"
         ],
         "phenocode": "2-Hydroxyglutarate",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -1556,7 +1556,7 @@
             "data/2-Hydroxyisobutyrate-2-Hydroxybutyrate_N-936.loco.csv"
         ],
         "phenocode": "2-Hydroxyisobutyrate-2-Hydroxybutyrate",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -1564,7 +1564,7 @@
             "data/3-Hydroxyisovaleric-Acid_N-936.loco.csv"
         ],
         "phenocode": "3-Hydroxyisovaleric-Acid",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -1572,7 +1572,7 @@
             "data/3-Indoxyl-Sulfate_N-936.loco.csv"
         ],
         "phenocode": "3-Indoxyl-Sulfate",
-        "category": "metabolite",
+        "category": "Tryptophan alkaloids",
         "num_samples": 924
     },
     {
@@ -1580,7 +1580,7 @@
             "data/3-Methyl-3-Hydroxyglutaric-Acid_N-936.loco.csv"
         ],
         "phenocode": "3-Methyl-3-Hydroxyglutaric-Acid",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -1588,7 +1588,7 @@
             "data/3HBA_N-936.loco.csv"
         ],
         "phenocode": "3HBA",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -1596,7 +1596,7 @@
             "data/5-Aminovaleric-Acid_N-936.loco.csv"
         ],
         "phenocode": "5-Aminovaleric-Acid",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -1604,7 +1604,7 @@
             "data/5-Methylcytidine_N-936.loco.csv"
         ],
         "phenocode": "5-Methylcytidine",
-        "category": "metabolite",
+        "category": "Pyrimidines",
         "num_samples": 924
     },
     {
@@ -1612,7 +1612,7 @@
             "data/7-Methylguanine_N-936.loco.csv"
         ],
         "phenocode": "7-Methylguanine",
-        "category": "metabolite",
+        "category": "Purines",
         "num_samples": 924
     },
     {
@@ -1620,7 +1620,7 @@
             "data/Acetylcarnitine_N-936.loco.csv"
         ],
         "phenocode": "Acetylcarnitine",
-        "category": "metabolite",
+        "category": "Fatty esters",
         "num_samples": 924
     },
     {
@@ -1628,7 +1628,7 @@
             "data/Adenosine_N-936.loco.csv"
         ],
         "phenocode": "Adenosine",
-        "category": "metabolite",
+        "category": "Purines",
         "num_samples": 924
     },
     {
@@ -1636,7 +1636,7 @@
             "data/Adenylosuccinate_N-936.loco.csv"
         ],
         "phenocode": "Adenylosuccinate",
-        "category": "metabolite",
+        "category": "Purines",
         "num_samples": 924
     },
     {
@@ -1644,7 +1644,7 @@
             "data/Agmatine_N-936.loco.csv"
         ],
         "phenocode": "Agmatine",
-        "category": "metabolite",
+        "category": "Ornithine alkaloids",
         "num_samples": 924
     },
     {
@@ -1652,7 +1652,7 @@
             "data/Alanine_N-936.loco.csv"
         ],
         "phenocode": "Alanine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1660,7 +1660,7 @@
             "data/Allantoin_N-936.loco.csv"
         ],
         "phenocode": "Allantoin",
-        "category": "metabolite",
+        "category": "Cyclic ureas",
         "num_samples": 924
     },
     {
@@ -1668,7 +1668,7 @@
             "data/Alpha-Ketoglutaric-Acid_N-936.loco.csv"
         ],
         "phenocode": "Alpha-Ketoglutaric-Acid",
-        "category": "metabolite",
+        "category": "TCA acids",
         "num_samples": 924
     },
     {
@@ -1676,7 +1676,7 @@
             "data/alpha-Tocopherol_N-936.loco.csv"
         ],
         "phenocode": "alpha-Tocopherol",
-        "category": "metabolite",
+        "category": "Quinones and hydroquinones",
         "num_samples": 924
     },
     {
@@ -1684,7 +1684,7 @@
             "data/Anserine_N-936.loco.csv"
         ],
         "phenocode": "Anserine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1692,7 +1692,7 @@
             "data/Arachidonate_N-936.loco.csv"
         ],
         "phenocode": "Arachidonate",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -1700,7 +1700,7 @@
             "data/Arginine_N-936.loco.csv"
         ],
         "phenocode": "Arginine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1708,7 +1708,7 @@
             "data/Asparagine_N-936.loco.csv"
         ],
         "phenocode": "Asparagine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1716,7 +1716,7 @@
             "data/Aspartic-Acid_N-936.loco.csv"
         ],
         "phenocode": "Aspartic-Acid",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1724,7 +1724,7 @@
             "data/Betaine_N-936.loco.csv"
         ],
         "phenocode": "Betaine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1732,7 +1732,7 @@
             "data/Cadaverine_N-936.loco.csv"
         ],
         "phenocode": "Cadaverine",
-        "category": "metabolite",
+        "category": "Fatty amines",
         "num_samples": 924
     },
     {
@@ -1740,7 +1740,7 @@
             "data/Carnitine_N-936.loco.csv"
         ],
         "phenocode": "Carnitine",
-        "category": "metabolite",
+        "category": "Carnitines",
         "num_samples": 924
     },
     {
@@ -1748,7 +1748,7 @@
             "data/Carnosine_N-936.loco.csv"
         ],
         "phenocode": "Carnosine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1756,7 +1756,7 @@
             "data/Cholesteryl-Sulfate_N-936.loco.csv"
         ],
         "phenocode": "Cholesteryl-Sulfate",
-        "category": "metabolite",
+        "category": "Sterols",
         "num_samples": 924
     },
     {
@@ -1764,7 +1764,7 @@
             "data/Choline_N-936.loco.csv"
         ],
         "phenocode": "Choline",
-        "category": "metabolite",
+        "category": "Cholines",
         "num_samples": 924
     },
     {
@@ -1772,7 +1772,7 @@
             "data/Citrulline_N-936.loco.csv"
         ],
         "phenocode": "Citrulline",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1780,7 +1780,7 @@
             "data/Creatine_N-936.loco.csv"
         ],
         "phenocode": "Creatine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1788,7 +1788,7 @@
             "data/Creatinine_N-936.loco.csv"
         ],
         "phenocode": "Creatinine",
-        "category": "metabolite",
+        "category": "Azoles",
         "num_samples": 924
     },
     {
@@ -1796,7 +1796,7 @@
             "data/Cystathionine_N-936.loco.csv"
         ],
         "phenocode": "Cystathionine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1804,7 +1804,7 @@
             "data/Cystine_N-936.loco.csv"
         ],
         "phenocode": "Cystine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1812,7 +1812,7 @@
             "data/Cytidine_N-936.loco.csv"
         ],
         "phenocode": "Cytidine",
-        "category": "metabolite",
+        "category": "Pyrimidines",
         "num_samples": 924
     },
     {
@@ -1820,7 +1820,7 @@
             "data/D-Leucic-Acid_N-936.loco.csv"
         ],
         "phenocode": "D-Leucic-Acid",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -1828,7 +1828,7 @@
             "data/Deoxycarnitine_N-936.loco.csv"
         ],
         "phenocode": "Deoxycarnitine",
-        "category": "metabolite",
+        "category": "Fatty esters",
         "num_samples": 924
     },
     {
@@ -1836,7 +1836,7 @@
             "data/Dimethylarginine-A-SDMA_N-936.loco.csv"
         ],
         "phenocode": "Dimethylarginine-A-SDMA",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1844,7 +1844,7 @@
             "data/Dimethylglycine_N-936.loco.csv"
         ],
         "phenocode": "Dimethylglycine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1852,7 +1852,7 @@
             "data/Epinephrine_N-936.loco.csv"
         ],
         "phenocode": "Epinephrine",
-        "category": "metabolite",
+        "category": "Tyrosine alkaloids",
         "num_samples": 924
     },
     {
@@ -1860,7 +1860,7 @@
             "data/Ethanolamine_N-936.loco.csv"
         ],
         "phenocode": "Ethanolamine",
-        "category": "metabolite",
+        "category": "Amines",
         "num_samples": 924
     },
     {
@@ -1868,7 +1868,7 @@
             "data/Ethylmalonic-acid_N-936.loco.csv"
         ],
         "phenocode": "Ethylmalonic-acid",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -1876,7 +1876,7 @@
             "data/FAD_N-936.loco.csv"
         ],
         "phenocode": "FAD",
-        "category": "metabolite",
+        "category": "Flavins",
         "num_samples": 924
     },
     {
@@ -1884,7 +1884,7 @@
             "data/G6P_N-936.loco.csv"
         ],
         "phenocode": "G6P",
-        "category": "metabolite",
+        "category": "Monosaccharides",
         "num_samples": 924
     },
     {
@@ -1892,7 +1892,7 @@
             "data/gamma-Aminobutyrate_N-936.loco.csv"
         ],
         "phenocode": "gamma-Aminobutyrate",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -1900,7 +1900,7 @@
             "data/Glucoronate_N-936.loco.csv"
         ],
         "phenocode": "Glucoronate",
-        "category": "metabolite",
+        "category": "Monosaccharides",
         "num_samples": 924
     },
     {
@@ -1908,7 +1908,7 @@
             "data/Glucose_N-936.loco.csv"
         ],
         "phenocode": "Glucose",
-        "category": "metabolite",
+        "category": "Monosaccharides",
         "num_samples": 924
     },
     {
@@ -1916,7 +1916,7 @@
             "data/Glutamic-acid_N-936.loco.csv"
         ],
         "phenocode": "Glutamic-acid",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1924,7 +1924,7 @@
             "data/Glutamine_N-936.loco.csv"
         ],
         "phenocode": "Glutamine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1932,7 +1932,7 @@
             "data/Glutaric-Acid_N-936.loco.csv"
         ],
         "phenocode": "Glutaric-Acid",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -1940,7 +1940,7 @@
             "data/Glutarylcarnitine_N-936.loco.csv"
         ],
         "phenocode": "Glutarylcarnitine",
-        "category": "metabolite",
+        "category": "Fatty esters",
         "num_samples": 924
     },
     {
@@ -1948,7 +1948,7 @@
             "data/Glycerol-3-P_N-936.loco.csv"
         ],
         "phenocode": "Glycerol-3-P",
-        "category": "metabolite",
+        "category": "Organic phosphoric acids",
         "num_samples": 924
     },
     {
@@ -1956,7 +1956,7 @@
             "data/Glycerophosphocholine_N-936.loco.csv"
         ],
         "phenocode": "Glycerophosphocholine",
-        "category": "metabolite",
+        "category": "Organic phosphoric acids",
         "num_samples": 924
     },
     {
@@ -1964,7 +1964,7 @@
             "data/Glycine_N-936.loco.csv"
         ],
         "phenocode": "Glycine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1972,7 +1972,7 @@
             "data/Guanidinoacetate_N-936.loco.csv"
         ],
         "phenocode": "Guanidinoacetate",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1980,7 +1980,7 @@
             "data/Histidine_N-936.loco.csv"
         ],
         "phenocode": "Histidine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1988,7 +1988,7 @@
             "data/Homoarginine_N-936.loco.csv"
         ],
         "phenocode": "Homoarginine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -1996,7 +1996,7 @@
             "data/Homocitrulline_N-936.loco.csv"
         ],
         "phenocode": "Homocitrulline",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2004,7 +2004,7 @@
             "data/Hydroxyproline_N-936.loco.csv"
         ],
         "phenocode": "Hydroxyproline",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2012,7 +2012,7 @@
             "data/Hypotaurine_N-936.loco.csv"
         ],
         "phenocode": "Hypotaurine",
-        "category": "metabolite",
+        "category": "Sulfinic acids",
         "num_samples": 924
     },
     {
@@ -2020,7 +2020,7 @@
             "data/Hypoxanthine_N-936.loco.csv"
         ],
         "phenocode": "Hypoxanthine",
-        "category": "metabolite",
+        "category": "Purines",
         "num_samples": 924
     },
     {
@@ -2028,7 +2028,7 @@
             "data/Imidazole-Propionate_N-936.loco.csv"
         ],
         "phenocode": "Imidazole-Propionate",
-        "category": "metabolite",
+        "category": "Histidine alkaloids",
         "num_samples": 924
     },
     {
@@ -2036,7 +2036,7 @@
             "data/Indole-3-Acetic-Acid_N-936.loco.csv"
         ],
         "phenocode": "Indole-3-Acetic-Acid",
-        "category": "metabolite",
+        "category": "Tryptophan alkaloids",
         "num_samples": 924
     },
     {
@@ -2044,7 +2044,7 @@
             "data/Indole-3-Lactate_N-936.loco.csv"
         ],
         "phenocode": "Indole-3-Lactate",
-        "category": "metabolite",
+        "category": "Tryptophan alkaloids",
         "num_samples": 924
     },
     {
@@ -2052,7 +2052,7 @@
             "data/Indole-3-Propionate_N-936.loco.csv"
         ],
         "phenocode": "Indole-3-Propionate",
-        "category": "metabolite",
+        "category": "Tryptophan alkaloids",
         "num_samples": 924
     },
     {
@@ -2060,7 +2060,7 @@
             "data/iso-Leucine--allo-isoLeucine_N-936.loco.csv"
         ],
         "phenocode": "iso-Leucine--allo-isoLeucine",
-        "category": "metabolite",
+        "category": "Unclassified metabolite",
         "num_samples": 924
     },
     {
@@ -2068,7 +2068,7 @@
             "data/isoValerylcarnitine_N-936.loco.csv"
         ],
         "phenocode": "isoValerylcarnitine",
-        "category": "metabolite",
+        "category": "Fatty esters",
         "num_samples": 924
     },
     {
@@ -2076,7 +2076,7 @@
             "data/Kynurenic-Acid_N-936.loco.csv"
         ],
         "phenocode": "Kynurenic-Acid",
-        "category": "metabolite",
+        "category": "Anthranilic acid alkaloids",
         "num_samples": 924
     },
     {
@@ -2084,7 +2084,7 @@
             "data/L-Kynurenine_N-936.loco.csv"
         ],
         "phenocode": "L-Kynurenine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2092,7 +2092,7 @@
             "data/Lactate_N-936.loco.csv"
         ],
         "phenocode": "Lactate",
-        "category": "metabolite",
+        "category": "ShortUnclassified metabolitechain acids",
         "num_samples": 924
     },
     {
@@ -2100,7 +2100,7 @@
             "data/Leucine--D-Norleucine_N-936.loco.csv"
         ],
         "phenocode": "Leucine--D-Norleucine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2108,7 +2108,7 @@
             "data/Linoleic-Acid_N-936.loco.csv"
         ],
         "phenocode": "Linoleic-Acid",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -2116,7 +2116,7 @@
             "data/Linolenic-Acid_N-936.loco.csv"
         ],
         "phenocode": "Linolenic-Acid",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -2124,7 +2124,7 @@
             "data/Lysine_N-936.loco.csv"
         ],
         "phenocode": "Lysine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2132,7 +2132,7 @@
             "data/Margaric-Acid_N-936.loco.csv"
         ],
         "phenocode": "Margaric-Acid",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -2140,7 +2140,7 @@
             "data/Methionine_N-936.loco.csv"
         ],
         "phenocode": "Methionine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2148,7 +2148,7 @@
             "data/Methionine-Sulfoxide_N-936.loco.csv"
         ],
         "phenocode": "Methionine-Sulfoxide",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2156,7 +2156,7 @@
             "data/N-Ac-Alanine_N-936.loco.csv"
         ],
         "phenocode": "N-Ac-Alanine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2164,7 +2164,7 @@
             "data/N-Ac-Glutamate_N-936.loco.csv"
         ],
         "phenocode": "N-Ac-Glutamate",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2172,7 +2172,7 @@
             "data/N-Ac-L-Glutamine_N-936.loco.csv"
         ],
         "phenocode": "N-Ac-L-Glutamine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2180,7 +2180,7 @@
             "data/N-Ac-Phenylalanine_N-936.loco.csv"
         ],
         "phenocode": "N-Ac-Phenylalanine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2188,7 +2188,7 @@
             "data/N-Ac-Tryptophan_N-936.loco.csv"
         ],
         "phenocode": "N-Ac-Tryptophan",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2196,7 +2196,7 @@
             "data/N-Acetyl-Aspartate-NAA_N-936.loco.csv"
         ],
         "phenocode": "N-Acetyl-Aspartate-NAA",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2204,7 +2204,7 @@
             "data/N-Carbamoyl-B-Alanine_N-936.loco.csv"
         ],
         "phenocode": "N-Carbamoyl-B-Alanine",
-        "category": "metabolite",
+        "category": "Organonitrogen compounds",
         "num_samples": 924
     },
     {
@@ -2212,7 +2212,7 @@
             "data/n-Formylmethionine_N-936.loco.csv"
         ],
         "phenocode": "n-Formylmethionine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2220,7 +2220,7 @@
             "data/N2-N2-Dimethylguanosine_N-936.loco.csv"
         ],
         "phenocode": "N2-N2-Dimethylguanosine",
-        "category": "metabolite",
+        "category": "Purines",
         "num_samples": 924
     },
     {
@@ -2228,7 +2228,7 @@
             "data/N6-Acetyl-Lysine_N-936.loco.csv"
         ],
         "phenocode": "N6-Acetyl-Lysine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2236,7 +2236,7 @@
             "data/N6-Trimethyllysine_N-936.loco.csv"
         ],
         "phenocode": "N6-Trimethyllysine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2244,7 +2244,7 @@
             "data/Ornithine_N-936.loco.csv"
         ],
         "phenocode": "Ornithine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2252,7 +2252,7 @@
             "data/Orotate_N-936.loco.csv"
         ],
         "phenocode": "Orotate",
-        "category": "metabolite",
+        "category": "Pyrimidines",
         "num_samples": 924
     },
     {
@@ -2260,7 +2260,7 @@
             "data/Oxalacetate_N-936.loco.csv"
         ],
         "phenocode": "Oxalacetate",
-        "category": "metabolite",
+        "category": "TCA acids",
         "num_samples": 924
     },
     {
@@ -2268,7 +2268,7 @@
             "data/Oxidized-Glutathione_N-936.loco.csv"
         ],
         "phenocode": "Oxidized-Glutathione",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2276,7 +2276,7 @@
             "data/Palmitic-Acid_N-936.loco.csv"
         ],
         "phenocode": "Palmitic-Acid",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -2284,7 +2284,7 @@
             "data/Pantothenate_N-936.loco.csv"
         ],
         "phenocode": "Pantothenate",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2292,7 +2292,7 @@
             "data/Phenylacetylglutamine_N-936.loco.csv"
         ],
         "phenocode": "Phenylacetylglutamine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2300,7 +2300,7 @@
             "data/Phenylalanine_N-936.loco.csv"
         ],
         "phenocode": "Phenylalanine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2308,7 +2308,7 @@
             "data/Phenyllactic-Acid_N-936.loco.csv"
         ],
         "phenocode": "Phenyllactic-Acid",
-        "category": "metabolite",
+        "category": "Phenylpropanoids",
         "num_samples": 924
     },
     {
@@ -2316,7 +2316,7 @@
             "data/PPA_N-936.loco.csv"
         ],
         "phenocode": "PPA",
-        "category": "metabolite",
+        "category": "Phenylpropanoids",
         "num_samples": 924
     },
     {
@@ -2324,7 +2324,7 @@
             "data/Proline_N-936.loco.csv"
         ],
         "phenocode": "Proline",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2332,7 +2332,7 @@
             "data/Pseudouridine_N-936.loco.csv"
         ],
         "phenocode": "Pseudouridine",
-        "category": "metabolite",
+        "category": "Pyrimidines",
         "num_samples": 924
     },
     {
@@ -2340,7 +2340,7 @@
             "data/Pyroglutamic-Acid_N-936.loco.csv"
         ],
         "phenocode": "Pyroglutamic-Acid",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2348,7 +2348,7 @@
             "data/Pyruvate_N-936.loco.csv"
         ],
         "phenocode": "Pyruvate",
-        "category": "metabolite",
+        "category": "ShortUnclassified metabolitechain acids",
         "num_samples": 924
     },
     {
@@ -2356,7 +2356,7 @@
             "data/Reduced-Glutathione_N-936.loco.csv"
         ],
         "phenocode": "Reduced-Glutathione",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2364,7 +2364,7 @@
             "data/Riboflavin_N-936.loco.csv"
         ],
         "phenocode": "Riboflavin",
-        "category": "metabolite",
+        "category": "Alloxazines and isoalloxazines",
         "num_samples": 924
     },
     {
@@ -2372,7 +2372,7 @@
             "data/S-Methylcysteine_N-936.loco.csv"
         ],
         "phenocode": "S-Methylcysteine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2380,7 +2380,7 @@
             "data/SAH_N-936.loco.csv"
         ],
         "phenocode": "SAH",
-        "category": "metabolite",
+        "category": "Purines",
         "num_samples": 924
     },
     {
@@ -2388,7 +2388,7 @@
             "data/Sarcosine_N-936.loco.csv"
         ],
         "phenocode": "Sarcosine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2396,7 +2396,7 @@
             "data/Serine_N-936.loco.csv"
         ],
         "phenocode": "Serine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2404,7 +2404,7 @@
             "data/Suberic-Acid_N-936.loco.csv"
         ],
         "phenocode": "Suberic-Acid",
-        "category": "metabolite",
+        "category": "Fatty acids",
         "num_samples": 924
     },
     {
@@ -2412,7 +2412,7 @@
             "data/Succinate_N-936.loco.csv"
         ],
         "phenocode": "Succinate",
-        "category": "metabolite",
+        "category": "TCA acids",
         "num_samples": 924
     },
     {
@@ -2420,7 +2420,7 @@
             "data/Succinylcarnitine_N-936.loco.csv"
         ],
         "phenocode": "Succinylcarnitine",
-        "category": "metabolite",
+        "category": "Fatty esters",
         "num_samples": 924
     },
     {
@@ -2428,7 +2428,7 @@
             "data/Taurine_N-936.loco.csv"
         ],
         "phenocode": "Taurine",
-        "category": "metabolite",
+        "category": "Sulfonic acids",
         "num_samples": 924
     },
     {
@@ -2436,7 +2436,7 @@
             "data/Thiamine_N-936.loco.csv"
         ],
         "phenocode": "Thiamine",
-        "category": "metabolite",
+        "category": "Pyrimidines",
         "num_samples": 924
     },
     {
@@ -2444,7 +2444,7 @@
             "data/Threonine_N-936.loco.csv"
         ],
         "phenocode": "Threonine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2452,7 +2452,7 @@
             "data/Trigonelline_N-936.loco.csv"
         ],
         "phenocode": "Trigonelline",
-        "category": "metabolite",
+        "category": "Pyridine alkaloids",
         "num_samples": 924
     },
     {
@@ -2460,7 +2460,7 @@
             "data/Trimethylamine-N-Oxide-TMAO_N-936.loco.csv"
         ],
         "phenocode": "Trimethylamine-N-Oxide-TMAO",
-        "category": "metabolite",
+        "category": "Amine oxides",
         "num_samples": 924
     },
     {
@@ -2468,7 +2468,7 @@
             "data/Tryptophan_N-936.loco.csv"
         ],
         "phenocode": "Tryptophan",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2476,7 +2476,7 @@
             "data/Tyrosine_N-936.loco.csv"
         ],
         "phenocode": "Tyrosine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2484,7 +2484,7 @@
             "data/Uracil_N-936.loco.csv"
         ],
         "phenocode": "Uracil",
-        "category": "metabolite",
+        "category": "Pyrimidines",
         "num_samples": 924
     },
     {
@@ -2492,7 +2492,7 @@
             "data/Valine_N-936.loco.csv"
         ],
         "phenocode": "Valine",
-        "category": "metabolite",
+        "category": "Amino acids and peptides",
         "num_samples": 924
     },
     {
@@ -2500,7 +2500,7 @@
             "data/Xanthine_N-936.loco.csv"
         ],
         "phenocode": "Xanthine",
-        "category": "metabolite",
+        "category": "Purines",
         "num_samples": 924
     }
 ]

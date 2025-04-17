@@ -171,6 +171,13 @@ ok, I'll rerun with this change. I think it should be ok(?)
 
 Rerun is SLURM job 25343866
 --> Ok great, it cached the previous steps so it's picking up where it left off
+--> Succeded in 5.5 hours
+--> Combined with the previous partial-job, this run took 8 hours
+    which is 1 hour faster than last time, but I gave more RAM
+
+
+I saved/pushed these changes to the dev branch here:
+    https://github.com/AkeyLab/DAP_pheweb
 
 ----------------------------------
 Transfering build artifacts to AWS
@@ -220,5 +227,43 @@ the disk size so I can keep both copies on the EC2 instance in case we want to g
 I took a snapshot of the volume for safety and then I expanded it to 256G
 I don't think this should cost too much more. EC2 and EC2-Other costs are currently
 around $45 a month
-???
+
+There were quite a few steps to follow for volume expansion in the directions here:
+    https://docs.aws.amazon.com/ebs/latest/userguide/recognize-expanded-volume-linux.html?icmpid=docs_ec2_console
+
+But it worked so now we have plenty of space for the transfer after `pheweb process` finishes:
+    ubuntu@ip-172-31-25-46:~$ df -h
+    Filesystem      Size  Used Avail Use% Mounted on
+    /dev/root       248G   95G  154G  39% /
+
+The current July 2024 version of PheWeb stayed accessible during this volumne increase!
+
+Ok, now I'm transferring the build artifacts with the following commands
+
+    * scp -i "Pheweb.pem" -r generated-by-pheweb/ ubuntu@ec2-3-144-223-60.us-east-2.compute.amazonaws.com:/home/ubuntu/DAP_pheweb_20250415
+    * scp -i "Pheweb.pem" -r pheweb/ ubuntu@ec2-3-144-223-60.us-east-2.compute.amazonaws.com:/home/ubuntu/DAP_pheweb_20250415
+    * scp -i "Pheweb.pem" setup.* ubuntu@ec2-3-144-223-60.us-east-2.compute.amazonaws.com:/home/ubuntu/DAP_pheweb_20250415
+    * scp -i "Pheweb.pem" pheno-list.json  ubuntu@ec2-3-144-223-60.us-east-2.compute.amazonaws.com:/home/ubuntu/DAP_pheweb_20250415
+
+    steps for installing pheweb
+    * python3.8 -m venv .venv
+    * source .venv/bin/activate
+    * pip install -e .
+
+Then to serve pheweb, as long as the venv is activated with the source command above, just:
+    pheweb serve
+
+Run this command in a tmux session so it stays running
+
+Later realized that I don't have to transfer the per-phenotype .gz files to AWS
+since those aren't used to serve the website, they are just intermediate files
+used to cache progress of `pheweb process`
+--> Not transferring these files would have saved 28GB
+--> These files are in generated-by-pheweb/pheno_gz/
+
+Oh dang, I realized I made a mistake when creating the pheno-list.json where I
+used the wrong column to specify the "Category" of the "Phenotypes".
+--> This was an easy fix, but I need to rerun the `process pheweb` which will
+    likely take a few hours, I think the later steps aren't cached
+--> This is SLURM job 25353624
 

@@ -20,7 +20,7 @@ for i,r in df.iterrows():
     json_data.append({
         'assoc_files': [ r['fpath'] ],
         'phenocode': r['pheweb_phenotype_name'],
-        'category': r['category'],
+        'category': r['pheweb_phenotype_category'],
         'num_samples': r['sample_size'],
     })
 
