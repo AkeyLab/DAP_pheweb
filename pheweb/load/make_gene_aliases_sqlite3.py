@@ -10,21 +10,22 @@ import sqlite3
 from typing import List, Dict, Iterable
 
 def get_genenamesorg_ensg_aliases_map(ensgs_to_consider: Iterable[str]) -> Dict[str, List[str]]:
+    #RB edits Apr 17th 2025, the ftp.ebi.ac.uk URL is no longer available, commenting out
     ensgs_to_consider = set(ensgs_to_consider)
-    r = urllib.request.urlopen('http://ftp.ebi.ac.uk/pub/databases/genenames/new/json/non_alt_loci_set.json')
-    data = r.read().decode('utf-8')
     ensg_to_aliases = {}
-    for row in json.loads(data)['response']['docs']:
-        try:
-            if not row.get('ensembl_gene_id',None) or row['ensembl_gene_id'] not in ensgs_to_consider: continue
-            assert re.match(r'^ENSG[R0-9\.]+$', row['ensembl_gene_id']), row
-            aliases = [row['symbol']] + row.get('prev_symbol',[]) + row.get('alias_symbol',[])
-            aliases = [alias for alias in aliases if alias != '']
-            aliases = [alias for alias in aliases if re.match(r'^[-\._a-zA-Z0-9]+$', alias)]
-            # for alias in aliases: assert re.match(r'^[-\._a-zA-Z0-9]+$', alias), (alias, [ord(c) for c in alias], row)
-            ensg_to_aliases[row['ensembl_gene_id']] = aliases
-        except Exception:
-            raise PheWebError('Cannot handle genenames row: {}'.format(row))
+    #r = urllib.request.urlopen('http://ftp.ebi.ac.uk/pub/databases/genenames/new/json/non_alt_loci_set.json')
+    #data = r.read().decode('utf-8')
+    #for row in json.loads(data)['response']['docs']:
+    #    try:
+    #        if not row.get('ensembl_gene_id',None) or row['ensembl_gene_id'] not in ensgs_to_consider: continue
+    #        assert re.match(r'^ENSG[R0-9\.]+$', row['ensembl_gene_id']), row
+    #        aliases = [row['symbol']] + row.get('prev_symbol',[]) + row.get('alias_symbol',[])
+    #        aliases = [alias for alias in aliases if alias != '']
+    #        aliases = [alias for alias in aliases if re.match(r'^[-\._a-zA-Z0-9]+$', alias)]
+    #        # for alias in aliases: assert re.match(r'^[-\._a-zA-Z0-9]+$', alias), (alias, [ord(c) for c in alias], row)
+    #        ensg_to_aliases[row['ensembl_gene_id']] = aliases
+    #    except Exception:
+    #        raise PheWebError('Cannot handle genenames row: {}'.format(row))
     return ensg_to_aliases
 
 def get_gene_aliases() -> Dict[str, str]:

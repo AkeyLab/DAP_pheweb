@@ -12,12 +12,12 @@
 #bash strict mode
 set -euo pipefail
 
-while read PHENO
+awk -F, 'NR > 1 { print $NF }' mlma_paths_with_metadata.csv > .mlma_paths.txt
+
+while read MLMA
 do
-    MLMA="/scratch/vsohrab/dap_precision2023_blood_*transformed*/association/${PHENO}_N-*.mlma"
-    MLMA=${MLMA[0]} #should all be arrays of length 1
     ls $MLMA
     ./mlma_to_csv.py $MLMA
-done < blood_phenotypes.txt
+done < .mlma_paths.txt
 
 

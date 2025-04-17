@@ -1,3 +1,6 @@
+#Convert dog GTF to BED for PheWeb annotations
+
+
 #bash strict mode
 set -euo pipefail
 awk -F'\t' '$3 == "gene" { print $1,$4,$5,$9 }' /scratch/vsohrab/reference/UU_Cfam_GSD_1.0_ROSY.refSeq.ensformat.gtf | 
