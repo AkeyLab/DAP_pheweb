@@ -265,5 +265,11 @@ Oh dang, I realized I made a mistake when creating the pheno-list.json where I
 used the wrong column to specify the "Category" of the "Phenotypes".
 --> This was an easy fix, but I need to rerun the `process pheweb` which will
     likely take a few hours, I think the later steps aren't cached
---> This is SLURM job 25353624
+--> This is SLURM job 25353624 and took 5.5 hours again
+
+I then copied over the `generated_by_pheweb/` folder again to get the correct categories
+
+I think everything else looks good as of today Apr 17th 2025, and the new version
+of the PheWeb website is live:
+    http://ec2-3-144-223-60.us-east-2.compute.amazonaws.com:8000/
 
