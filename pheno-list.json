@@ -2092,7 +2092,7 @@
             "data/Lactate_N-936.loco.csv"
         ],
         "phenocode": "Lactate",
-        "category": "ShortUnclassified metabolitechain acids",
+        "category": "Short-chain fatty acid",
         "num_samples": 924
     },
     {
@@ -2348,7 +2348,7 @@
             "data/Pyruvate_N-936.loco.csv"
         ],
         "phenocode": "Pyruvate",
-        "category": "ShortUnclassified metabolitechain acids",
+        "category": "Short-chain fatty acid",
         "num_samples": 924
     },
     {

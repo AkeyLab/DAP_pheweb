@@ -273,3 +273,15 @@ I think everything else looks good as of today Apr 17th 2025, and the new versio
 of the PheWeb website is live:
     http://ec2-3-144-223-60.us-east-2.compute.amazonaws.com:8000/
 
+----------------------
+Update on May 2nd 2025
+----------------------
+Vista noticed an error where two phenotypes had the category "shortUnclassified metabolite chain fatty acid"
+but they should have been called "short-chain fatty acid"
+
+This was an easy fix, I just did a find-and-replace in the following two files
+- generated-by-pheweb/phenotypes.json
+- pheno-list.json
+
+I then restarted the `pheweb serve` 
+
