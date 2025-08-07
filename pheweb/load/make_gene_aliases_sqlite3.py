@@ -10,21 +10,22 @@ import sqlite3
 from typing import List, Dict, Iterable
 
 def get_genenamesorg_ensg_aliases_map(ensgs_to_consider: Iterable[str]) -> Dict[str, List[str]]:
+    #RB edits Apr 17th 2025, the ftp.ebi.ac.uk URL is no longer available, commenting out
     ensgs_to_consider = set(ensgs_to_consider)
-    r = urllib.request.urlopen('http://ftp.ebi.ac.uk/pub/databases/genenames/new/json/non_alt_loci_set.json')
-    data = r.read().decode('utf-8')
     ensg_to_aliases = {}
-    for row in json.loads(data)['response']['docs']:
-        try:
-            if not row.get('ensembl_gene_id',None) or row['ensembl_gene_id'] not in ensgs_to_consider: continue
-            assert re.match(r'^ENSG[R0-9\.]+$', row['ensembl_gene_id']), row
-            aliases = [row['symbol']] + row.get('prev_symbol',[]) + row.get('alias_symbol',[])
-            aliases = [alias for alias in aliases if alias != '']
-            aliases = [alias for alias in aliases if re.match(r'^[-\._a-zA-Z0-9]+$', alias)]
-            # for alias in aliases: assert re.match(r'^[-\._a-zA-Z0-9]+$', alias), (alias, [ord(c) for c in alias], row)
-            ensg_to_aliases[row['ensembl_gene_id']] = aliases
-        except Exception:
-            raise PheWebError('Cannot handle genenames row: {}'.format(row))
+    #r = urllib.request.urlopen('http://ftp.ebi.ac.uk/pub/databases/genenames/new/json/non_alt_loci_set.json')
+    #data = r.read().decode('utf-8')
+    #for row in json.loads(data)['response']['docs']:
+    #    try:
+    #        if not row.get('ensembl_gene_id',None) or row['ensembl_gene_id'] not in ensgs_to_consider: continue
+    #        assert re.match(r'^ENSG[R0-9\.]+$', row['ensembl_gene_id']), row
+    #        aliases = [row['symbol']] + row.get('prev_symbol',[]) + row.get('alias_symbol',[])
+    #        aliases = [alias for alias in aliases if alias != '']
+    #        aliases = [alias for alias in aliases if re.match(r'^[-\._a-zA-Z0-9]+$', alias)]
+    #        # for alias in aliases: assert re.match(r'^[-\._a-zA-Z0-9]+$', alias), (alias, [ord(c) for c in alias], row)
+    #        ensg_to_aliases[row['ensembl_gene_id']] = aliases
+    #    except Exception:
+    #        raise PheWebError('Cannot handle genenames row: {}'.format(row))
     return ensg_to_aliases
 
 def get_gene_aliases() -> Dict[str, str]:
@@ -58,12 +59,19 @@ def download_gene_aliases() -> None:
     aliases_filepath = Path(get_filepath('gene-aliases-sqlite3', must_exist=False))
     aliases_tmp_filepath = Path(get_tmp_path(aliases_filepath))
     print('gene aliases will be stored at {!r}'.format(str(aliases_filepath)))
-    if aliases_tmp_filepath.exists(): aliases_tmp_filepath.unlink()
-    db = sqlite3.connect(str(aliases_tmp_filepath))
-    with db:
+
+    if aliases_tmp_filepath.exists():
+        aliases_tmp_filepath.unlink()
+
+    #db = sqlite3.connect(str(aliases_tmp_filepath))
+    #with db:
+    #RB NOTE: trying to make the db only exist in the context manager and trying to skip temp
+    with sqlite3.connect(str(aliases_filepath)) as db:
         db.execute('CREATE TABLE gene_aliases (alias TEXT PRIMARY KEY, canonicals_comma TEXT)')
         db.executemany('INSERT INTO gene_aliases VALUES (?,?)', sorted(get_gene_aliases().items()))
-    aliases_tmp_filepath.replace(aliases_filepath)
+
+    #RB NOTE: this is causing a an (error 16) resource busy
+    #aliases_tmp_filepath.replace(aliases_filepath)
 
 def run(argv:List[str]) -> None:
     if '-h' in argv or '--help' in argv:

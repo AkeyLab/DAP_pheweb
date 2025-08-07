@@ -14,6 +14,7 @@ import os.path
 import boltons.iterutils
 from typing import List,Tuple,Optional,Dict,Iterator
 import shutil
+import sys
 Chrom = str
 GeneName = str
 
@@ -92,9 +93,12 @@ def run(argv:List[str]) -> None:
     out_filepath = get_filepath('sites', must_exist=False)
 
     print('Fetching genes...')
+    sys.stdout.flush()
     from . import download_genes
     download_genes.run([])
 
     print('About to annotate genes')
+    sys.stdout.flush()
     annotate_genes(input_filepath, out_filepath)
     print('Finished fetching genes')
+    sys.stdout.flush()

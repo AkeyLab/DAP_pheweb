@@ -23,7 +23,7 @@ from ..utils import chrom_order, chrom_order_list, chrom_aliases, PheWebError
 from ..file_utils import VariantFileReader, VariantFileWriter, get_filepath, read_maybe_gzip
 from .. import conf
 from .load_utils import mtime
-
+import sys
 import os
 import itertools
 from typing import Iterator,Dict,Any,List
@@ -100,11 +100,13 @@ def run(argv:List[str]) -> None:
 
     if not os.path.exists(rsids_filepath):
         print('Fetching rsids...')
+        sys.stdout.flush()
         from . import download_rsids
         download_rsids.run([])
 
     if os.path.exists(out_filepath) and max(mtime(in_filepath), mtime(rsids_filepath)) <= mtime(out_filepath):
         print('rsid annotation is up-to-date!')
+        sys.stdout.flush()
         return
 
     with VariantFileReader(in_filepath) as in_reader, \

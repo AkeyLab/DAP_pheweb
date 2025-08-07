@@ -28,7 +28,8 @@
 {% block contained %}
 <div class="row">
     <div class="col-xs-12 col-sm-8">
-        <h1 style="margin-top:0">All Phenotypes</h1>
+        <h1 style="margin-top:0">DAP PheWeb Browser</h1>
+        <h3>All Phenotypes</h3>
     </div>
     <div class="col-xs-12 col-sm-4">
       {% if config.DOWNLOAD_PHENOTYPES_BUTTON %}
@@ -88,8 +89,7 @@
     <td><%= (h.pval == 0) ? '≤1e-320' : h.pval.toExponential(1) %></td>
     <td class="nearest_genes_col">
       <% var ngs = h.nearest_genes.split(","); ngs.forEach(function(g, i) { %>
-      <a style="color:black" href="{{ url_for('.region_page', phenocode='', region='').rstrip('/') }}/<%= h.phenocode %>/gene/<%= g %>?include=<%= h.chrom %>-<%= h.pos %>">
-        <i><%= g %></i></a><%= (i+1 !== ngs.length)?',':'' %>
+      <i><%= g %></i><%= (i+1 !== ngs.length)?',':'' %>
       <% }) %>
     </td>
   </tr>

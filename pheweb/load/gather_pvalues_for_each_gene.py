@@ -56,10 +56,16 @@ def run(argv:List[str]) -> None:
     #RB NOTE: then there would be a partial file? Hopefully this is ok.
     #out_tmp_filepath = Path(get_tmp_path(out_filepath))
     #db = sqlite3.connect(str(out_tmp_filepath))
-    db = sqlite3.connect(str(out_filepath))
-    with db:
-        db.execute('CREATE TABLE best_phenos_for_each_gene (gene TEXT PRIMARY KEY, json TEXT)')
-        db.executemany('INSERT INTO best_phenos_for_each_gene (gene, json) VALUES (?,?)', ((k,json.dumps(v)) for k,v in data.items()))
+    with sqlite3.connect(str(out_filepath)) as db:
+        #if the best_phenos_for_each_gene table already exists, don't create it
+        existing_table = db.execute(
+                  """SELECT name FROM sqlite_master WHERE type='table'
+                    AND name='best_phenos_for_each_gene'; """).fetchall()
+
+        if not existing_table:
+            db.execute('CREATE TABLE best_phenos_for_each_gene (gene TEXT PRIMARY KEY, json TEXT)')
+            db.executemany('INSERT INTO best_phenos_for_each_gene (gene, json) VALUES (?,?)', ((k,json.dumps(v)) for k,v in data.items()))
+
     #out_tmp_filepath.replace(out_filepath)
     print('Done making best-pheno-for-each-gene at {}'.format(str(out_filepath)))
 
