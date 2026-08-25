@@ -285,3 +285,13 @@ This was an easy fix, I just did a find-and-replace in the following two files
 
 I then restarted the `pheweb serve` 
 
+-----------------------
+Update on Aug 25th 2026
+-----------------------
+Vista noticed that the recombination rate was from humans for the line in the "region" plots such as:
+        http://ec2-3-144-223-60.us-east-2.compute.amazonaws.com:8000/region/dd_weight_lbs/4:55864374-55964374
+
+After asking claude, this was easily fixed by removing the line:
+        LocusZoom.Layouts.get("data_layer", "recomb_rate", { unnamespaced: true }),
+
+from `pheweb/serve/static/region.js` which removed the recombination line from the locusZoom plot.
