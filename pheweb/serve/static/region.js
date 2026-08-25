@@ -268,7 +268,6 @@ LocusZoom.TransformationFunctions.add("percent", function(x) {
                     },
                     data_layers: [
                         LocusZoom.Layouts.get("data_layer", "significance", { unnamespaced: true }),
-                        LocusZoom.Layouts.get("data_layer", "recomb_rate", { unnamespaced: true }),
                         function() {
                             var l = LocusZoom.Layouts.get("data_layer", "association_pvalues_catalog", {
                                 unnamespaced: true,
