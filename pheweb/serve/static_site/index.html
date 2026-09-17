@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PheWeb</title>
+
+<link href="vendor/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="vendor/css/locuszoom.css" rel="stylesheet" type="text/css">
+<link href="vendor/css/common.css" rel="stylesheet" type="text/css">
+<link href="vendor/css/region.css" rel="stylesheet" type="text/css">
+<link href="site.css" rel="stylesheet" type="text/css">
+
+<script src="config.js"></script>
+
+<!-- Third-party, in the versions and order pheweb's layout.html loads them.
+     typeahead must precede common.js, which builds a Bloodhound at load time. -->
+<script src="vendor/jquery.min.js"></script>
+<script src="vendor/underscore.min.js"></script>
+<!-- pheweb's common.js builds a Bloodhound at load time, so this must precede it. -->
+<script src="vendor/typeahead.bundle.min.js"></script>
+<script src="vendor/bootstrap.min.js"></script>
+<script src="vendor/d3.min.js"></script>
+<script src="vendor/d3-tip.js"></script>
+<script src="vendor/locuszoom.min.js"></script>
+<script src="vendor/stream_table-1.1.1.min.js"></script>
+
+<script src="vendor/tabix-bundle.js"></script>
+<script src="js/pheweb-static.js"></script>
+
+<!-- router.js sets window.model, which common.js reads while loading. -->
+<script src="js/router.js"></script>
+
+<!-- pheweb's common.js supplies window.debug, fmt() and two_digit_format(). -->
+<script src="vendor/common.js"></script>
+
+<!-- Must precede any load of region.js: it hooks adapter registration so the
+     range-request transport is installed before the plot is created. -->
+<script src="js/lz-static-adapters.js"></script>
+
+<script src="js/jump.js"></script>
+<script src="js/page-variant.js"></script>
+<script src="js/page-pheno.js"></script>
+<script src="js/page-region.js"></script>
+<script src="js/page-tables.js"></script>
+<script src="js/page-about.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#/" style="color:#333;font-weight:bold;">PheWeb</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#/phenotypes" style="color:#333;font-weight:bold;">Phenotypes</a></li>
+      <li><a href="#/top_hits" style="color:#333;font-weight:bold;">Top Hits</a></li>
+      <li><a href="#/about" style="color:#333;font-weight:bold;">About</a></li>
+    </ul>
+    <form class="navbar-form navbar-right" onsubmit="return false;">
+      <div class="form-group">
+        <input type="text" class="form-control" id="jump-input" size="26"
+               placeholder="2:54051770 or 2-54051770-A-T" title="Jump to a variant page">
+      </div>
+      <button type="button" class="btn btn-default" id="jump-go">Go</button>
+    </form>
+  </div>
+</nav>
+<div class="container"><div id="jump-error" class="alert alert-warning" style="display:none"></div></div>
+
+<div class="container">
+  <div id="page-error" class="alert alert-danger" style="display:none"></div>
+  <!-- Exactly one pane is injected here at a time. PheWeb's page scripts
+       hardcode ids like #stream_table and #search, so two panes cannot
+       coexist in the document. -->
+  <div id="page"></div>
+</div>
+
+<!-- PheWeb's scripts look up `#streamtable-template` by that exact id, so each
+     page copies its own row template into this one element before loading them. -->
+<script type="text/template" id="streamtable-template"></script>
+
+<script type="text/template" id="tpl-page-home">
+  <h1>PheWeb <small>static build</small></h1>
+  <p class="text-muted">Serverless build of the Dog Aging Project PheWeb. Every plot is
+     computed in the browser from the same files the original site serves.</p>
+  <div id="route-note" class="alert alert-warning" style="display:none"></div>
+  <p>Examples:</p>
+  <ul>
+    <li><a href="#/variant/2-54051770-A-T">variant 2:54,051,770 A/T</a> near MCCC2</li>
+    <li><a href="#/pheno/3-Hydroxyisovaleric-Acid">phenotype 3-Hydroxyisovaleric-Acid</a></li>
+    <li><a href="#/region/3-Hydroxyisovaleric-Acid/2:54001770-54101770">region 2:54,001,770-54,101,770</a> for that phenotype</li>
+  </ul>
+  <p>Or browse <a href="#/phenotypes">all 313 phenotypes</a> and <a href="#/top_hits">all top hits</a>.
+     Both tables are searchable by phenotype, category and gene.</p>
+</script>
+
+<script type="text/template" id="tpl-page-variant">
+  <div class="row">
+    <div class="variant-info col-xs-12">
+      <h1 style="margin-top:0" id="variant-title"></h1>
+      <p>Nearest gene: <i id="nearest-gene"></i></p>
+      <span id="maf-range"></span>
+      <p id="view-on" style="display:none">View on <a id="ucsc-link" href="#"></a></p>
+      <div id="phewas_plot_container"></div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6">
+      <input type="text" class="form-control" id="search" placeholder="Search phenotypes...">
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-6">
+      <h5 class="pull-right"><div id="streamtable-found" class="label label-primary"></div></h5>
+    </div>
+  </div>
+  <div class="row stream_table_row">
+    <div class="col-xs-12">
+      <table id="stream_table" class="table table-striped table-bordered">
+        <thead><tr>
+          <th>Category</th><th>Phenotype</th><th>P-value</th>
+          <th>Effect Size (se)</th><th>Number of samples</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="tpl-st-variant">
+  <tr>
+    <td style="color:<%= d.color %>"><%= d.category %></td>
+    <td><a href="#/pheno/<%= d.phenocode %>"><%= d.phenostring || d.phenocode %></a></td>
+    <td><%= (d.pval==0) ? '&le;1e-320' : d.pval.toExponential(1) %></td>
+    <td><%= (d.beta!==undefined) ? d.beta.toPrecision(2) : "" %><%= (d.sebeta!==undefined) ? " ("+d.sebeta.toPrecision(2)+")" : "" %></td>
+    <td><% if (d.num_cases) { %><%= d.num_cases %> / <%= d.num_controls %><% } else if (d.num_samples) { %><%= d.num_samples %><% } %></td>
+  </tr>
+</script>
+
+<script type="text/template" id="tpl-page-pheno">
+  <div id="pheno-warning" class="alert alert-danger" style="display:none"></div>
+  <br>
+  <div class="row"><div class="col-xs-12"><h1 style="margin-top:0" id="pheno-title"></h1></div></div>
+  <div class="row">
+    <div class="pheno-info col-xs-12 col-sm-8">
+      <p id="pheno-samples"></p>
+      <p id="pheno-category"></p>
+    </div>
+    <div class="pheno-info col-xs-12 col-sm-4">
+      <span class="pull-right">
+        <a class="btn btn-default" id="download-sumstats" href="#">Download summary statistics</a>
+      </span>
+    </div>
+  </div>
+  <div class="row"><div class="col-xs-12"><ul>
+    <li class="section-link"><a href="#manhattan">Manhattan</a></li>
+    <li class="section-link"><a href="#qq">QQ</a></li>
+  </ul></div></div>
+  <div class="row">
+    <div class="col-xs-12" id="manhattan">
+      <div id="manhattan_plot_container"></div>
+    </div>
+  </div>
+  <div class="row"><div class="col-xs-12 col-md-8"><h3>Top Loci:</h3></div></div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6">
+      <input type="text" class="form-control" id="search" placeholder="Search... &quot;IGF1&quot;, &quot;15:41521885&quot;, etc.">
+    </div>
+    <div class="col-xs-12 col-sm-4 col-sm-6">
+      <h5 class="pull-right"><div id="streamtable-found" class="label label-primary"></div></h5>
+    </div>
+  </div>
+  <div class="row stream_table_row">
+    <div class="col-xs-12">
+      <table id="stream_table" class="table table-striped table-bordered">
+        <thead><tr>
+          <th>Variant</th><th>Nearest Gene(s)</th><th>MAF</th>
+          <th>P-value</th><th>Effect Size (se)</th><th>Region</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="pheno-info col-xs-12 col-sm-4 col-md-3 col-lg-3">
+      <h3 id="qq">QQ plot:</h3>
+      <div id="qq_plot_container"></div>
+      <p class="gc-control"></p>
+      <i>(Genomic Control lambda calculated based on the 50th percentile (median),
+         10th percentile, 1st percentile, and 1/10th of a percentile)</i>
+      <br><br><br>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="tpl-page-about">
+  <div class="row"><div class="col-xs-12 col-md-9">
+    <h1 style="margin-top:0">About</h1>
+
+    <p>The Dog Aging Project is an open science, longitudinal scientific study aimed at
+      understanding the biological and environmental factors that influence aging in dogs,
+      to find ways to extend healthy lifespan in dogs, and to gain biological insights
+      relevant to human aging. The Dog Aging Project is supported under U19 grant AG057377
+      (PI: Daniel Promislow) from the National Institute on Aging, a part of the National
+      Institutes of Health, and by additional grants and private donations. The Dog Aging
+      Project data are publicly available and housed on the Terra platform at the Broad
+      Institute of MIT and Harvard.</p>
+
+    <p>This PheWeb website allows for interactive visualization of genome wide
+      association studies (GWAS) to investigate the genetic contributions to DAP
+      phenotypes, by extending the existing PheWeb software for use in dogs:</p>
+
+    <p><b>Gagliano Taliun, S.A., VandeHaar, P. et al. Exploring and visualizing large-scale
+      genetic associations by using PheWeb. Nat Genet 52, 550&ndash;552 (2020).</b></p>
+
+    <p>Source code for PheWeb can be found
+      <a href="https://github.com/statgen/pheweb/" target="_blank" rel="noopener">here</a>,
+      version <span id="about-pheweb-version">1.3.16</span>.</p>
+
+    <p>The code for this DAP-specific pheweb is hosted at
+      <a href="https://github.com/AkeyLab/DAP_pheweb" target="_blank" rel="noopener">github</a>
+      (currently private).</p>
+
+    <br>
+
+    <p>All positions are from Reference
+      <a href="https://genome.ucsc.edu/cgi-bin/hgGateway?db=canFam4" target="_blank" rel="noopener">CanFam4</a>.</p>
+
+    <hr>
+
+    <h3>About this copy</h3>
+    <p>This is a static build. Every plot is computed in your browser from the same files
+      the original site served, read directly over HTTP range requests, so there is no
+      application server and no database behind it. It can be downloaded and served from a
+      local machine unchanged.</p>
+    <p id="about-dataset" class="text-muted"></p>
+  </div></div>
+</script>
+
+<script type="text/template" id="tpl-page-phenotypes">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8">
+      <h1 style="margin-top:0">All Phenotypes</h1>
+      <p class="text-muted">Search matches phenotype names, categories and the nearest genes
+         of each phenotype's strongest hit.</p>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <span class="pull-right"><a class="btn btn-default" id="download-phenotypes"
+        href="data/phenotypes.tsv" download="phenotypes.tsv">Download</a></span>
+    </div>
+  </div>
+  <div class="row" style="margin-bottom:0.5em">
+    <div class="col-xs-12 col-sm-8 col-md-6">
+      <input type="text" class="form-control" id="search" placeholder="Search... &quot;IGF1&quot;, &quot;Amino acids&quot;, etc.">
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-6">
+      <h5 class="pull-right"><div id="streamtable-found" class="label label-primary"></div></h5>
+    </div>
+  </div>
+  <div class="row stream_table_row"><div class="col-xs-12">
+    <table id="stream_table" class="table table-striped table-bordered">
+      <thead><tr>
+        <th>Category</th><th>Phenotype</th><th>#Samples</th><th>GC&lambda;0.01</th>
+        <th>#Loci&lt;5e-8</th><th>Top variant in pheno</th><th>P-value</th>
+        <th class="nearest_genes_col">Nearest Gene(s)</th><th>Region</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div></div>
+</script>
+
+<script type="text/template" id="tpl-st-phenotypes">
+  <tr>
+    <td><%= h.category %></td>
+    <td><a href="#/pheno/<%= encodeURIComponent(h.phenocode) %>"><%= h.phenostring || h.phenocode %></a></td>
+    <td><% if (h.num_cases && h.num_controls) { %><%= h.num_cases.toLocaleString() %> + <%= h.num_controls.toLocaleString() %><% } else if (h.num_samples) { %><%= h.num_samples.toLocaleString() %><% } %></td>
+    <td><%= (h.gc_lambda_hundred !== null && h.gc_lambda_hundred !== undefined) ? h.gc_lambda_hundred.toFixed(2) : '' %></td>
+    <td><%= h.num_peaks %></td>
+    <td><a href="#/variant/<%= h.chrom %>-<%= h.pos %>-<%= h.ref %>-<%= h.alt %>">
+      <%= h.chrom %>:<%= h.pos.toLocaleString() %> <%= h.ref %> / <%= h.alt %></a></td>
+    <td><%= (h.pval == 0) ? '&le;1e-320' : h.pval.toExponential(1) %></td>
+    <td class="nearest_genes_col">
+      <% var ngs = (h.nearest_genes || '').split(',').filter(Boolean); %>
+      <% ngs.forEach(function(g, i) { %><span class="gene-symbol"><%= g %></span><%= (i + 1 !== ngs.length) ? ', ' : '' %><% }); %>
+    </td>
+    <td><a title="Region plot centred on this row's top variant"
+      href="#/region/<%= encodeURIComponent(h.phenocode) %>/<%= h.chrom %>:<%= Math.max(1, h.pos - 50000) %>-<%= h.pos + 50000 %>">&plusmn;50 kb</a></td>
+  </tr>
+</script>
+
+<script type="text/template" id="tpl-page-tophits">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8">
+      <h1 style="margin-top:0">Top Hits</h1>
+      <p class="text-muted">Peaks with p &lt; 1e-6. A variant is hidden if another within 500 kb
+         in the same phenotype has a smaller p-value. Search matches phenotype, category and gene.</p>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <span class="pull-right"><a class="btn btn-default" id="download-tophits"
+        href="data/top_hits.tsv" download="top_hits.tsv">Download</a></span>
+    </div>
+  </div>
+  <div class="row" style="margin-bottom:0.5em">
+    <div class="col-xs-12 col-sm-8 col-md-6">
+      <input type="text" class="form-control" id="search" placeholder="Search... &quot;IGF1&quot;, &quot;weight&quot;, etc.">
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-6">
+      <h5 class="pull-right"><div id="streamtable-found" class="label label-primary"></div></h5>
+    </div>
+  </div>
+  <div class="row stream_table_row"><div class="col-xs-12">
+    <table id="stream_table" class="table table-striped table-bordered">
+      <thead><tr>
+        <th>Category</th><th>Phenotype</th><th>Top variant in locus</th>
+        <th>P-value</th><th>MAF</th><th class="nearest_genes_col">Nearest Gene(s)</th><th>Region</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div></div>
+</script>
+
+<script type="text/template" id="tpl-st-tophits">
+  <tr>
+    <td><%= h.category %></td>
+    <td><a href="#/pheno/<%= encodeURIComponent(h.phenocode) %>"><%= h.phenostring || h.phenocode %></a></td>
+    <td><a href="#/variant/<%= h.chrom %>-<%= h.pos %>-<%= h.ref %>-<%= h.alt %>">
+      <%= h.chrom %>:<%= h.pos.toLocaleString() %> <%= h.ref %> / <%= h.alt %></a></td>
+    <td><%= (h.pval == 0) ? '&le;1e-320' : h.pval.toExponential(1) %></td>
+    <td><%= (h.maf)? h.maf.toPrecision(2) : (h.af)? Math.min(h.af, 1-h.af).toPrecision(2) : "" %></td>
+    <td class="nearest_genes_col">
+      <% var ngs = (h.nearest_genes || '').split(',').filter(Boolean); %>
+      <% ngs.forEach(function(g, i) { %><span class="gene-symbol"><%= g %></span><%= (i + 1 !== ngs.length) ? ', ' : '' %><% }); %>
+    </td>
+    <td><a title="LocusZoom region plot centred on this variant"
+      href="#/region/<%= encodeURIComponent(h.phenocode) %>/<%= h.chrom %>:<%= Math.max(1, h.pos - 50000) %>-<%= h.pos + 50000 %>">&plusmn;50 kb</a></td>
+  </tr>
+</script>
+
+<script type="text/template" id="tpl-page-gene">
+  <div class="row"><div class="col-xs-12">
+    <h1 style="margin-top:0"><i id="gene-title"></i></h1>
+    <p class="text-muted">canFam4 <span id="gene-position"></span></p>
+  </div></div>
+  <div class="row" style="margin-bottom:0.5em">
+    <div class="col-xs-12 col-sm-8"><h3 style="margin-top:0">Associated phenotypes</h3></div>
+    <div class="col-xs-12 col-sm-4">
+      <h5 class="pull-right"><div id="gene-found" class="label label-primary"></div></h5>
+    </div>
+  </div>
+  <div class="row"><div class="col-xs-12">
+    <table id="stream_table" class="table table-striped table-bordered">
+      <thead><tr>
+        <th>Category</th><th>Phenotype</th><th>P-value</th>
+        <th>Effect Size</th><th>MAF</th><th>#Samples</th><th>Region</th>
+      </tr></thead>
+      <tbody id="gene-table-body"></tbody>
+    </table>
+  </div></div>
+  <div class="row"><div class="col-xs-12">
+    <p id="gene-plot-note" class="text-muted"></p>
+    <p><a id="gene-region-link" href="#/">Open this region on its own page</a></p>
+    <div id="gene-plot-host"></div>
+  </div></div>
+</script>
+
+<script type="text/template" id="tpl-page-region">
+  <div class="row"><div class="col-xs-12"><h1 style="margin-top:0" id="region-title"></h1></div></div>
+  <div class="row">
+    <div class="pheno-info col-xs-12">
+      <p id="region-samples"></p>
+      <p id="region-category"></p>
+      <!-- No placeholder href. An anchor without one is inert, so if the
+           script never fills it in the link is visibly dead rather than
+           silently navigating to "#", which the router would read as a route
+           change and bounce to the home page. -->
+      <p>View this region in
+        <a id="ucsc-region-link" target="_blank" rel="noopener noreferrer">the UCSC Genome Browser</a>
+        <small class="text-muted" id="ucsc-region-pos"></small>
+      </p>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="lz-1" class="lz-container-responsive" data-region=""></div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="tpl-st-pheno">
+  <tr>
+    <td><a href="#/variant/<%= v.chrom %>-<%= v.pos %>-<%= v.ref %>-<%= v.alt %>">
+      <%= v.chrom %>:<%= v.pos.toLocaleString() %> <%= v.ref %> / <%= v.alt %>
+      <% if (v.rsids) { %>(<%= v.rsids.replace(/,/g, ', ') %>)<% } %>
+    </a></td>
+    <td><i><%= v.nearest_genes.replace(/,/g, ', ') %></i></td>
+    <td><%= (v.maf)? v.maf.toPrecision(2) : (v.af)? Math.min(v.af, 1-v.af).toPrecision(2) : (v.ac)? v.ac : "" %></td>
+    <td><%= (v.pval==0) ? '&le;1e-320' : v.pval.toExponential(1) %></td>
+    <td><%= (v.beta) ? v.beta.toPrecision(2) : "" %><%= (v.sebeta) ? " ("+v.sebeta.toPrecision(2)+")" : "" %></td>
+    <td><a title="LocusZoom region plot centred on this variant"
+           href="#/region/<%= encodeURIComponent(window.pheno) %>/<%= v.chrom %>:<%= Math.max(1, v.pos - 50000) %>-<%= v.pos + 50000 %>">&plusmn;50 kb</a></td>
+  </tr>
+</script>
+
+</body>
+</html>

@@ -54,6 +54,7 @@ for submodule in '''
  wsgi
  top_loci
  detect_ref
+ build_static
 '''.split():
     def f(submodule:str, argv:List[str]) -> None:
         module = importlib.import_module('.load.{}'.format(submodule), __package__)
