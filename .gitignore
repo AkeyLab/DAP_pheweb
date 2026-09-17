@@ -5,3 +5,9 @@ build
 dist
 pheweb/load/cffi/_x*
 .eggs
+
+# `pheweb process` and `pheweb build-static` both write here, and the result is
+# routinely tens of gigabytes. Without this, `git add -A` in a working PheWeb
+# directory tries to commit the entire dataset.
+generated-by-pheweb/
+.venv/
