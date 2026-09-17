@@ -19,3 +19,10 @@ dist
 pheweb/load/cffi/_x*
 .eggs
 .venv
+
+# Large input and reference data. These are currently untracked only because
+# every file inside happens to match a pattern above; one stray README or log
+# would make the whole directory stageable, and `git add -A` would then try to
+# commit tens of gigabytes.
+mlmas/
+canfam3.1_fas/
